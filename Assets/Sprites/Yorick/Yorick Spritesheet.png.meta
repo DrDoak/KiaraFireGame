@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 35db936640e95c941b597f0bc00bf3f5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7555997330452051463
+    second: Yorick Spritesheet_0
+  - first:
+      213: -1387436271940501127
+    second: Yorick Spritesheet_1
+  - first:
+      213: 7567754587177849137
+    second: Yorick Spritesheet_2
+  - first:
+      213: -2363965904023087430
+    second: Yorick Spritesheet_3
+  - first:
+      213: 6548719266098311894
+    second: Yorick Spritesheet_4
+  - first:
+      213: 5477755222673183288
+    second: Yorick Spritesheet_5
+  - first:
+      213: 8782371060668290765
+    second: Yorick Spritesheet_6
+  - first:
+      213: -2651073727844316988
+    second: Yorick Spritesheet_7
+  - first:
+      213: 6743324108737183965
+    second: Yorick Spritesheet_8
+  - first:
+      213: -7539377336592411996
+    second: Yorick Spritesheet_9
+  - first:
+      213: 2674071515696791868
+    second: Yorick Spritesheet_10
+  - first:
+      213: -3708208554043762686
+    second: Yorick Spritesheet_11
+  - first:
+      213: 1213620726609520566
+    second: Yorick Spritesheet_12
+  - first:
+      213: -2197461029415675947
+    second: Yorick Spritesheet_13
+  - first:
+      213: -1027971103784432271
+    second: Yorick Spritesheet_14
+  - first:
+      213: 3155391198240759599
+    second: Yorick Spritesheet_15
+  - first:
+      213: -8439216295906628745
+    second: Yorick Spritesheet_16
+  - first:
+      213: -6839029926467274686
+    second: Yorick Spritesheet_17
+  - first:
+      213: 7446698468921774614
+    second: Yorick Spritesheet_18
+  - first:
+      213: 3998337235460414130
+    second: Yorick Spritesheet_19
+  - first:
+      213: 407787933168026399
+    second: Yorick Spritesheet_20
+  - first:
+      213: -5452669901033142837
+    second: Yorick Spritesheet_21
+  - first:
+      213: -2369120010309655262
+    second: Yorick Spritesheet_22
+  - first:
+      213: 7425154710178510090
+    second: Yorick Spritesheet_23
+  - first:
+      213: 526086896357562558
+    second: Yorick Spritesheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Yorick Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 127
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f90b9a1674b32790800000000000000
+      internalID: -7555997330452051463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 127
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9718e76cf06debce0800000000000000
+      internalID: -1387436271940501127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 127
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131911c83b0160960800000000000000
+      internalID: 7567754587177849137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 127
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6919df881813fd0800000000000000
+      internalID: -2363965904023087430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 127
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2fb85d979b1ea50800000000000000
+      internalID: 6548719266098311894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 127
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 832d9f54a55e40c40800000000000000
+      internalID: 5477755222673183288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6ddccd2ff31e970800000000000000
+      internalID: 8782371060668290765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 95
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c808729d7e753bd0800000000000000
+      internalID: -2651073727844316988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 95
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd08b9a9c89159d50800000000000000
+      internalID: 6743324108737183965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 95
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a257c8f140ce5790800000000000000
+      internalID: -7539377336592411996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 95
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31091d20e53c1520800000000000000
+      internalID: 2674071515696791868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 95
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208182f87fbc98cc0800000000000000
+      internalID: -3708208554043762686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7ac9dee95a7d010800000000000000
+      internalID: 1213620726609520566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 63
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d71aed16dc0181e0800000000000000
+      internalID: -2197461029415675947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 63
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d009f3ab9ebb1f0800000000000000
+      internalID: -1027971103784432271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 63
+        width: 35
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fd88aa3933acb20800000000000000
+      internalID: 3155391198240759599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 63
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b2cc3ed71e1ea80800000000000000
+      internalID: -8439216295906628745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 63
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248f6a04482e611a0800000000000000
+      internalID: -6839029926467274686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612178d9dccf75760800000000000000
+      internalID: 7446698468921774614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 31
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bad5d31882fc7730800000000000000
+      internalID: 3998337235460414130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 31
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13cb24f6f0c8a500800000000000000
+      internalID: 407787933168026399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 31
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5847f4d993454b0800000000000000
+      internalID: -5452669901033142837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 31
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225293b17e13f1fd0800000000000000
+      internalID: -2369120010309655262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 31
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0532866ed27b0760800000000000000
+      internalID: 7425154710178510090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yorick Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 67
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb85162be390d4700800000000000000
+      internalID: 526086896357562558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Yorick Spritesheet_0: -7555997330452051463
+      Yorick Spritesheet_1: -1387436271940501127
+      Yorick Spritesheet_10: 2674071515696791868
+      Yorick Spritesheet_11: -3708208554043762686
+      Yorick Spritesheet_12: 1213620726609520566
+      Yorick Spritesheet_13: -2197461029415675947
+      Yorick Spritesheet_14: -1027971103784432271
+      Yorick Spritesheet_15: 3155391198240759599
+      Yorick Spritesheet_16: -8439216295906628745
+      Yorick Spritesheet_17: -6839029926467274686
+      Yorick Spritesheet_18: 7446698468921774614
+      Yorick Spritesheet_19: 3998337235460414130
+      Yorick Spritesheet_2: 7567754587177849137
+      Yorick Spritesheet_20: 407787933168026399
+      Yorick Spritesheet_21: -5452669901033142837
+      Yorick Spritesheet_22: -2369120010309655262
+      Yorick Spritesheet_23: 7425154710178510090
+      Yorick Spritesheet_24: 526086896357562558
+      Yorick Spritesheet_3: -2363965904023087430
+      Yorick Spritesheet_4: 6548719266098311894
+      Yorick Spritesheet_5: 5477755222673183288
+      Yorick Spritesheet_6: 8782371060668290765
+      Yorick Spritesheet_7: -2651073727844316988
+      Yorick Spritesheet_8: 6743324108737183965
+      Yorick Spritesheet_9: -7539377336592411996
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

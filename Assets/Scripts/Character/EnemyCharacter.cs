@@ -16,7 +16,9 @@ public class EnemyCharacter : Character
 
     private float timeFirstFoundPlayer;
     private float timeOfNextAttack;
+    [SerializeField]
     private float moveToPlayerSpeed;
+    [SerializeField]
     private Vector2 playerOffset;
     private bool foundPlayer;
     private CharacterComponents components;

@@ -28,7 +28,7 @@ public class BaseMovement : MonoBehaviour
     private float gravity;
 
     private Vector3 lastPosition = new Vector3();
-
+    public bool applyYDecel;
     private SurroundingSensors sensors;
     public void SetFacingLeft(bool newFacingLeft)
     {
@@ -72,6 +72,10 @@ public class BaseMovement : MonoBehaviour
     {
         selfVelocity = new Vector2(selfVelocity.x, newY);
     }
+    public void ResetVerticalVelocity()
+    {
+        selfVelocity = new Vector2(selfVelocity.x, 0);
+    }
     public void ApplyImpulse(Vector2 impulse)
     {
         selfVelocity += impulse;
@@ -85,7 +89,7 @@ public class BaseMovement : MonoBehaviour
         Vector2 velocity = new Vector2();
         foreach(FixedMovementVector v in fixedMovements)
         {
-            velocity += (v.direction * components.MScalableTime.FixedDeltaTime);
+            velocity += (v.direction);
         }
         if (Mathf.Abs(selfVelocity.x) > 0.05f)
         {
@@ -94,14 +98,30 @@ public class BaseMovement : MonoBehaviour
         {
             selfVelocity.x = 0;
         }
-        if (sensors.Grounded && selfVelocity.y < 0)
+        if (applyYDecel)
         {
-            selfVelocity.y = 0;
+            if (Mathf.Abs(selfVelocity.y) > 0.05f)
+            {
+                selfVelocity.y -= (horizontalDeceleration * selfVelocity.y * components.MScalableTime.FixedDeltaTime);
+            }
+            else
+            {
+                selfVelocity.y = 0;
+            }
         }
-        if (selfVelocity.y > terminalVelocity && !sensors.Grounded)
+        
+        if (gravity != 0)
         {
-            selfVelocity.y -= (gravity * components.MScalableTime.FixedDeltaTime);
+            if (sensors.Grounded && selfVelocity.y < 0)
+            {
+                selfVelocity.y = 0;
+            }
+            if (selfVelocity.y > terminalVelocity && !sensors.Grounded)
+            {
+                selfVelocity.y -= (gravity * components.MScalableTime.FixedDeltaTime);
+            }
         }
+       
         velocity += selfVelocity;
         mRigidBody.velocity = velocity;
         trueVelocity = (transform.position - lastPosition);

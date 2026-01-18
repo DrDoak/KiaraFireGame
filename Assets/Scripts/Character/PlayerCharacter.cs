@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacter : Character
 {
+    public static PlayerCharacter Instance;
     [SerializeField]
     private float jumpForce;
     [SerializeField]
@@ -20,10 +21,45 @@ public class PlayerCharacter : Character
     private float _coyoteTimeCounter;
     private SurroundingSensors sensors;
     private float lastTimeHeldAttack;
+    private float horizontalMovement;
+    private bool hasMidAirJump = false;
+
+    [SerializeField]
+    private GameObject detectionBoxUp;
+    [SerializeField]
+    private GameObject detectionBoxSide;
+    [SerializeField]
+    private GameObject detectionBoxDown;
+
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
         sensors = GetComponent<SurroundingSensors>();
+        Instance = this;
+    }
+    private void Start()
+    {
+        components.MAttackConfirm.attackConfirm += OnAttackConfirm;
+    }
+    private void OnDestroy()
+    {
+        components.MAttackConfirm.attackConfirm -= OnAttackConfirm;
+    }
+    public void OnAttackConfirm(Hitbox hb, Hurtbox hurt, Attackable objectHit)
+    {
+        if (hb.damage > 0)
+        {
+            ReplenishMidAirJump();
+        }
+        if (hb.propelonHitConfirm.magnitude != 0)
+        {
+            if (hb.propelonHitConfirm.y > 0 && components.MMovement.Velocity.y < 0)
+            {
+                components.MMovement.ResetVerticalVelocity();
+            }
+            Vector2 propel = new Vector2((components.MMovement.FacingLeft ? -1 : 1) * hb.propelonHitConfirm.x, hb.propelonHitConfirm.y);
+            components.MMovement.ApplyImpulse(propel);
+        }
     }
     public bool HasSmallCharge()
     {
@@ -36,9 +72,13 @@ public class PlayerCharacter : Character
     // Update is called once per frame
     void Update()
     {
+        if (components.MMovement.Grounded())
+        {
+            ReplenishMidAirJump();
+        }
         UpdateTimers();
         ProcessState();
-        if (!components.MAnimatorOptions.InAction)
+        if (currentHitStun == 0 && !components.MAnimatorOptions.InAction)
         {
             AnimateNeutral();
         }
@@ -54,6 +94,9 @@ public class PlayerCharacter : Character
         if (components.MAnimatorOptions.hasControl)
         {
             ProcessMovement();
+        } else
+        {
+            canBlock = true;
         }
     }
 
@@ -63,29 +106,37 @@ public class PlayerCharacter : Character
     }
     void ProcessMovement()
     {
-        float horizontalMovement = 0;
+        horizontalMovement = 0;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) horizontalMovement--;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow)) horizontalMovement++;
         AttemptHorizontalMovement(horizontalMovement);
-        HandleJump(Input.GetKey(KeyCode.Space));
-        if (Input.GetKey(KeyCode.J))
-        {
-            HoldAttack();
-        }
+        HandleJump(Input.GetKey(KeyCode.Space), Input.GetKeyDown(KeyCode.Space));
+        canBlock = !Input.GetKey(KeyCode.J);
+        UpdateHoldAttack(!canBlock);
     }
-    void HoldAttack()
+    void UpdateHoldAttack(bool isHoldAttack)
     {
+        detectionBoxUp.SetActive(false);
+        detectionBoxSide.SetActive(false);
+        detectionBoxDown.SetActive(false);
+        if (!isHoldAttack)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.W))
         {
-            components.MAnimatorOptions.PerformActionAnimation("fire_up");
+            if (HasSmallCharge()) components.MAnimatorOptions.PerformActionAnimation("fire_up");
+            detectionBoxUp.SetActive(true);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            components.MAnimatorOptions.PerformActionAnimation("fire_down");
+            if (HasSmallCharge()) components.MAnimatorOptions.PerformActionAnimation("fire_down");
+            detectionBoxDown.SetActive(true);
         }
         else
         {
-            components.MAnimatorOptions.PerformActionAnimation("fire");
+            detectionBoxSide.SetActive(true);
+            if (HasSmallCharge()) components.MAnimatorOptions.PerformActionAnimation("fire");
         }
         lastTimeHeldAttack = components.MScalableTime.TimeSinceLevelLoad();
     }
@@ -94,15 +145,19 @@ public class PlayerCharacter : Character
 
     }
 
-    private void HandleJump(bool jumpPressed)
+    private void HandleJump(bool jumpPressed, bool jumpPressedFrame)
     {
         // Start the initial jump
-        if (jumpPressed && _coyoteTimeCounter > 0)
+        if (jumpPressed && _coyoteTimeCounter > 0 )
         {
-            float jumpVelocity = jumpForce;
             _coyoteTimeCounter = 0;
-
             _jumpTimeCounter = jumpTime;
+        }
+        if (jumpPressedFrame && !sensors.Grounded && hasMidAirJump)
+        {
+            _jumpTimeCounter = jumpTime;
+            components.MMovement.ResetVerticalVelocity();
+            hasMidAirJump = false;
         }
 
         // check if the ceiling was hit
@@ -126,7 +181,10 @@ public class PlayerCharacter : Character
         //    _body.linearVelocityY = Mathf.Clamp(_body.linearVelocityY, -airborneData.MaxFallingSpeed, Mathf.Infinity);
         //}
     }
-
+    public void ReplenishMidAirJump()
+    {
+        hasMidAirJump = true;
+    }
     private void Jump(bool jumpPressed, float jumpForce, float addedJumpForce, float jumpTime)
     {
         // When jump is being held, jump higher
@@ -151,12 +209,21 @@ public class PlayerCharacter : Character
 
     public void AnimateNeutral()
     {
+        components.mAnimator.speed = 1;
         if (sensors.Grounded)
         {
-            Vector2 currentSpeed = components.MMovement.Velocity;
+           Vector2 currentSpeed = components.MMovement.Velocity;
             if (Mathf.Abs(currentSpeed.x) > 0.5f)
             {
-                components.mAnimator.Play("run");
+                if (horizontalMovement != 0)
+                {
+                    components.mAnimator.speed = (Mathf.Abs(currentSpeed.x) / maxSpeed);
+                    components.mAnimator.Play("run");
+                } else
+                {
+                    components.mAnimator.Play("stop");
+                }
+                
             } else
             {
                 components.mAnimator.Play("idle");

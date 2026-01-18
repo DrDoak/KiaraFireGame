@@ -4,8 +4,9 @@ using UnityEngine;
 public enum Faction { FRIENDLY, ENEMY, NEUTRAL, INVINCIBLE}
 public class Attackable : MonoBehaviour
 {
-    public Faction MyFaction {get {return mFaction;}}
+    public Faction MyFaction {get {return mFaction;} set { mFaction = value; } }
     public CharacterComponents components;
+    [SerializeField]
     private Faction mFaction;
     [SerializeField]
     private float maxHP;
@@ -13,31 +14,50 @@ public class Attackable : MonoBehaviour
     private float currentHP;
     [SerializeField]
     private string deathAnimation;
+    [SerializeField]
+    private float knockbackScale = 1;
     public delegate void DeathEvent();
     public DeathEvent OnDeathCallback;
     // Start is called before the first frame update
     void Start()
     {
         components = GetComponent<CharacterComponents>();
-        foreach(Hitbox hb in GetComponentsInChildren<Hitbox>())
+        foreach(Hitbox hb in GetComponentsInChildren<Hitbox>(includeInactive: true))
         {
             hb.SetParent(this);
         }
-        foreach (Hurtbox hb in GetComponentsInChildren<Hurtbox>())
+        foreach (Hurtbox hb in GetComponentsInChildren<Hurtbox>(includeInactive: true))
         {
             hb.SetParent(this);
         }
     }
     public void TakeHit(Hitbox hb, Hurtbox hurtbox)
     {
-        ChangeHP(hb.damage);
-        components.MMovement.ApplyImpulse(hb.knockback);
+        if (!components.MCharacter.canBlock)
+        {
+            ChangeHP(-hb.damage);
+        }
+        bool facingLeft = false;
+        if (hb.ParentAttackable != null)
+        {
+            facingLeft = hb.ParentAttackable.components.MMovement.FacingLeft;
+        }
+        Vector2 knockback = new Vector2((facingLeft ? -1 : 1) * hb.knockback.x, hb.knockback.y);
+        if (components.MCharacter.canBlock)
+        {
+            knockback *= 0.5f;
+        }
+        knockback *= knockbackScale;
+        components.MMovement.ApplyImpulse(knockback);
         if (components.MCharacter != null)
         {
             components.MCharacter.ApplyHitStun(hb.hitstunSeconds);
         }
         TimeScaleManager.FreezeTime(hb.hitstopSeconds);
-        hb.ParentAttackable.components.MAttackConfirm.OnAttackConfirm(hb, hurtbox, this);
+        if (hb.ParentAttackable != null)
+        {
+            hb.ParentAttackable.components.MAttackConfirm.OnAttackConfirm(hb, hurtbox, this);
+        }
     }
     public void ChangeHP(float delta)
     {
@@ -54,9 +74,12 @@ public class Attackable : MonoBehaviour
         {
             OnDeathCallback();
         }
-        if (deathAnimation != null)
+        if (deathAnimation != "")
         {
             components.MAnimatorOptions.PlayAnimation(deathAnimation);
+        } else
+        {
+            Destroy(gameObject);
         }
     }
 }

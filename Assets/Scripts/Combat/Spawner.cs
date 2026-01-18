@@ -5,14 +5,19 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject objectToSpawn;
-    public GameObject chargedSpawn;
-    public GameObject largeChargeSpawn;
     public bool spawnNow;
     [SerializeField]
     public CharacterComponents components;
     [SerializeField]
     public PlayerCharacter player;
     private bool lastSpawnNow;
+    [Header("shotgun")]
+    [SerializeField]
+    private int numShots = -1;
+    [SerializeField]
+    private float angleSpread;
+    [SerializeField]
+    private float YoffsetSpread;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,33 +29,44 @@ public class Spawner : MonoBehaviour
     {
         if (spawnNow && !lastSpawnNow)
         {
-            if (chargedSpawn != null || largeChargeSpawn != null)
+            if (numShots > 0)
             {
-                ChargeSpawn();
+                ShotgunShots(objectToSpawn);
             } else
             {
                 SpawnObject(objectToSpawn);
             }
-            
         }
         lastSpawnNow = spawnNow;
     }
-    private void ChargeSpawn()
+    private void ShotgunShots(GameObject obj)
     {
-        if (player.HasLargeCharge() && largeChargeSpawn != null)
+        if (angleSpread > 0)
         {
-            SpawnObject(largeChargeSpawn);
-        } else if (player.HasSmallCharge() && chargedSpawn != null)
+            float angle = -((angleSpread * Mathf.Deg2Rad ) / 2);
+            float angleDivision = (angleSpread * Mathf.Deg2Rad) / numShots;
+            for (int i = 0; i < numShots; i++)
+            {
+                GameObject go = SpawnObject(obj);
+                go.GetComponent<Projectile>().SetAngleOffset(angle);
+                angle += angleDivision;
+            }
+        } else if (YoffsetSpread > 0)
         {
-            SpawnObject(chargedSpawn);
-        } else
-        {
-            SpawnObject(objectToSpawn);
+            float offset = -(YoffsetSpread / 2);
+            float division = YoffsetSpread / numShots;
+            for (int i = 0; i < numShots; i++)
+            {
+                GameObject go = SpawnObject(obj);
+                Projectile p = go.GetComponent<Projectile>();
+                p.initialVelocity = new Vector2(p.initialVelocity.x, p.initialVelocity.y + offset);
+                offset += division;
+            }
         }
     }
-    private void SpawnObject(GameObject obj)
+    private GameObject SpawnObject(GameObject obj)
     {
-        if (obj == null) return;
+        if (obj == null) return null;
         GameObject newObj = Instantiate(objectToSpawn, transform.position, Quaternion.identity);
         if (newObj.GetComponent<BaseMovement>() != null)
         {
@@ -60,5 +76,14 @@ public class Spawner : MonoBehaviour
         {
             newObj.GetComponent<Projectile>().SetParent(components.MAttackConfirm);
         }
+        if (newObj.GetComponent<Attackable>() != null)
+        {
+            newObj.GetComponent<Attackable>().MyFaction = components.MAttackable.MyFaction;
+        }
+        return newObj;
+        //foreach (Hitbox hb in newObj.GetComponentsInChildren<Hitbox>(includeInactive: true))
+        //{
+        //    hb.SetParent(components.MAttackable);
+        //}
     }
 }

@@ -10,6 +10,7 @@ public class Hitbox : MonoBehaviour
     public float hitstopSeconds = 0f;
     public int multiHits = 1;
     public float refreshTime = 0.15f;
+    public Vector2 propelonHitConfirm;
     public Attackable ParentAttackable { get { return parentAttackable; } }
     [SerializeField]
     private Attackable parentAttackable;
@@ -28,7 +29,11 @@ public class Hitbox : MonoBehaviour
     {
         
     }
-    
+    private void OnDisable()
+    {
+        timeHit.Clear();
+        numMultiHit.Clear();
+    }
     public void SetParent(Attackable a)
     {
         parentAttackable = a;
@@ -84,6 +89,7 @@ public class Hitbox : MonoBehaviour
         {
             return false;
         }
+        if (parentAttackable == null) return true;
         if (parentAttackable.MyFaction == Faction.NEUTRAL)
         {
             return true;

@@ -7,12 +7,13 @@ public class Character : MonoBehaviour
     [SerializeField]
     private float acceleration;
     [SerializeField]
-    private float maxSpeed;
+    protected float maxSpeed;
     protected float currentHitStun = 0;
     protected CharacterComponents components;
     public delegate void StateChangedEvent();
     public StateChangedEvent EnterHitStun;
     public StateChangedEvent ExitHitStun;
+    public bool canBlock;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -33,6 +34,16 @@ public class Character : MonoBehaviour
             }
         }
         currentHitStun = hitstun;
+        if (canBlock)
+        {
+            currentHitStun = hitstun * 0.5f;
+            components.MAnimatorOptions.PlayAnimation("block");
+        } else
+        {
+            currentHitStun = hitstun;
+            components.MAnimatorOptions.PlayAnimation("hurt");
+        }
+        
     }
 
     protected void DecreaseHitStun()
@@ -61,10 +72,5 @@ public class Character : MonoBehaviour
         // flip object based on direction
         float direction = Mathf.Sign(movementInput);
         components.MMovement.SetFacingLeft(direction < 0);
-    }
-
-    public bool IsGrounded()
-    {
-        return false;
     }
 }

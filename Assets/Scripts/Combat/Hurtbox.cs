@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hurtbox : MonoBehaviour
 {
-    public Attackable ParentAttackable { get { return ParentAttackable; } }
+    public Attackable ParentAttackable { get { return parentAttackable; } }
     [SerializeField]
     private Attackable parentAttackable;
     private CharacterComponents components;

@@ -12,7 +12,8 @@ public class EnemyCharacter : Character
     private float delayBetweenAttacks;
     [SerializeField]
     private string attackAnimation;
-
+    [SerializeField]
+    private bool renderRange;
 
     private float timeFirstFoundPlayer;
     private float timeOfNextAttack;
@@ -71,8 +72,11 @@ public class EnemyCharacter : Character
     }
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(0.5f, 0.0f, 0.0f, 0.4f);
-        Gizmos.DrawSphere(transform.position, characterDetectionZone);
+        if (renderRange)
+        {
+            Gizmos.color = new Color(0.5f, 0.0f, 0.0f, 0.4f);
+            Gizmos.DrawSphere(transform.position, characterDetectionZone);
+        }
     }
 
 }

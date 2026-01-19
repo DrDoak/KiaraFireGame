@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  unblockable: 0
   knockback: {x: 0, y: 0}
   hitstunSeconds: 0.5
   hitstopSeconds: 0
@@ -341,7 +342,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 222398630, guid: 81b459347bdb0ee46a30e835f11c8fdb, type: 3}
-  m_Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+  m_Color: {r: 0.6356318, g: 0.6509434, b: 0.076762185, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -976,6 +977,8 @@ MonoBehaviour:
   delayUntilAttack: 0.5
   delayBetweenAttacks: 1
   attackAnimation: shoot
+  moveToPlayerSpeed: 0
+  playerOffset: {x: 0, y: 0}
 --- !u!1 &8555438635104518824
 GameObject:
   m_ObjectHideFlags: 0

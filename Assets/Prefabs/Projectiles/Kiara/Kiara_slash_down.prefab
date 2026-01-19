@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kiara_slash_down
       objectReference: {fileID: 0}
+    - target: {fileID: 1782912299445555662, guid: 81e78979f1cfef74cbb06954144b6943, type: 3}
+      propertyPath: propelonHitConfirm.y
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4053385957628637447, guid: 81e78979f1cfef74cbb06954144b6943, type: 3}
       propertyPath: m_Sprite
       value: 

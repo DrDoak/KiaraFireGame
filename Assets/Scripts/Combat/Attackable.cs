@@ -33,7 +33,7 @@ public class Attackable : MonoBehaviour
     }
     public void TakeHit(Hitbox hb, Hurtbox hurtbox)
     {
-        if (!components.MCharacter.canBlock)
+        if (!components.MCharacter.canBlock || hb.unblockable)
         {
             ChangeHP(-hb.damage);
         }
@@ -45,7 +45,7 @@ public class Attackable : MonoBehaviour
         Vector2 knockback = new Vector2((facingLeft ? -1 : 1) * hb.knockback.x, hb.knockback.y);
         if (components.MCharacter.canBlock)
         {
-            knockback *= 0.5f;
+            knockback *= 0f;
         }
         knockback *= knockbackScale;
         components.MMovement.ApplyImpulse(knockback);

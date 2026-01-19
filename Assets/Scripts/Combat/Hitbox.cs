@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hitbox : MonoBehaviour
 {
     public float damage = 10.0f;
+    public bool unblockable;
     public Vector2 knockback;
     public float hitstunSeconds = 0.5f;
     public float hitstopSeconds = 0f;
@@ -74,7 +75,14 @@ public class Hitbox : MonoBehaviour
     {
         Attackable other = hb.ParentAttackable;
         hb.TakeHit(this);
-        timeHit[other] = components.MScalableTime.TimeSinceLevelLoad();
+        if (components == null)
+        {
+            timeHit[other] = Time.timeSinceLevelLoad;
+        } else
+        {
+            timeHit[other] = components.MScalableTime.TimeSinceLevelLoad();
+        }
+        
         if (!numMultiHit.ContainsKey(other))
         {
             numMultiHit[other] = 0;
@@ -84,7 +92,16 @@ public class Hitbox : MonoBehaviour
     private bool CanAttack(Attackable opponent)
     {
         if (numMultiHit.ContainsKey(opponent) && numMultiHit[opponent] >= multiHits) return false;
-        if (timeHit.ContainsKey(opponent) && components.MScalableTime.TimeSinceLevelLoad() - timeHit[opponent] < refreshTime) return false;
+        float time;
+        if (components == null)
+        {
+            time = Time.timeSinceLevelLoad;
+        }
+        else
+        {
+            time = components.MScalableTime.TimeSinceLevelLoad();
+        }
+        if (timeHit.ContainsKey(opponent) && time - timeHit[opponent] < refreshTime) return false;
         if (opponent.MyFaction == Faction.INVINCIBLE)
         {
             return false;

@@ -640,9 +640,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components: {fileID: 0}
   mFaction: 0
-  maxHP: 1000
-  currentHP: 1000
-  deathAnimation: die
+  maxHP: 100
+  currentHP: 100
+  deathAnimation: 
   knockbackScale: 1
 --- !u!114 &7310699394447063267
 MonoBehaviour:
@@ -678,12 +678,15 @@ MonoBehaviour:
   acceleration: 2
   maxSpeed: 12
   canBlock: 0
-  jumpForce: 12
-  addedJumpForce: 10
+  jumpForce: 15
+  addedJumpForce: 6
   jumpTime: 0.3
   CoyoteTime: 0
   chargeTimeSmall: 1
   chargeTimeLarge: 2
+  boostedMaxSpeed: 20
+  hitsToReachMaxBoost: 3
+  boostDecayTime: 0.5
   detectionBoxUp: {fileID: 3778352603424318732}
   detectionBoxSide: {fileID: 6794845495774925702}
   detectionBoxDown: {fileID: 1447432040809811459}
@@ -893,7 +896,7 @@ Transform:
   m_GameObject: {fileID: 5013247672464469533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 2.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -991,6 +994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  unblockable: 0
   knockback: {x: 0, y: 0}
   hitstunSeconds: 0.5
   hitstopSeconds: 0

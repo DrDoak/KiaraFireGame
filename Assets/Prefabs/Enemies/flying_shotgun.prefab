@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: angleSpread
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1337812485890219162, guid: 3bdd0c810ee93584ebe725b32a668f4f, type: 3}
+      propertyPath: delayBetweenAttacks
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3608206517742050532, guid: 3bdd0c810ee93584ebe725b32a668f4f, type: 3}
       propertyPath: m_Name
       value: flying_shotgun

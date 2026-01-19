@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerCharacter : Character
@@ -23,7 +24,12 @@ public class PlayerCharacter : Character
     private float lastTimeHeldAttack;
     private float horizontalMovement;
     private bool hasMidAirJump = false;
-
+    [SerializeField]
+    private float boostedMaxSpeed = 20;
+    [SerializeField]
+    private int hitsToReachMaxBoost = 4;
+    [SerializeField]
+    private float boostDecayTime = 1;
     [SerializeField]
     private GameObject detectionBoxUp;
     [SerializeField]
@@ -31,11 +37,15 @@ public class PlayerCharacter : Character
     [SerializeField]
     private GameObject detectionBoxDown;
 
+    private float lastTimeHeldInDirection;
+    private int lastDirectionBoost;
+
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
         sensors = GetComponent<SurroundingSensors>();
         Instance = this;
+        baseMaxSpeed = maxSpeed;
     }
     private void Start()
     {
@@ -60,6 +70,24 @@ public class PlayerCharacter : Character
             Vector2 propel = new Vector2((components.MMovement.FacingLeft ? -1 : 1) * hb.propelonHitConfirm.x, hb.propelonHitConfirm.y);
             components.MMovement.ApplyImpulse(propel);
         }
+        if (lastDirectionBoost == 0 && Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                lastDirectionBoost = -1;
+            }  else if (Input.GetKey(KeyCode.D))
+            {
+                lastDirectionBoost = 1;
+            }
+        } 
+        if (lastDirectionBoost == -1 && Input.GetKey(KeyCode.A))
+        {
+            maxSpeed += (boostedMaxSpeed - baseMaxSpeed) / hitsToReachMaxBoost;
+        } else if (lastDirectionBoost == 1 && Input.GetKey(KeyCode.D))
+        {
+            maxSpeed += (boostedMaxSpeed - baseMaxSpeed) / hitsToReachMaxBoost;
+        }
+        maxSpeed = Mathf.Clamp(maxSpeed, baseMaxSpeed, boostedMaxSpeed);
     }
     public bool HasSmallCharge()
     {
@@ -82,6 +110,10 @@ public class PlayerCharacter : Character
         {
             AnimateNeutral();
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     private void ProcessState()
@@ -89,19 +121,35 @@ public class PlayerCharacter : Character
         if (currentHitStun > 0)
         {
             HitStunState();
-            return;
         } 
         if (components.MAnimatorOptions.hasControl)
         {
+            ProcessMaxSpeedAdjustments();
             ProcessMovement();
         } else
         {
             canBlock = true;
         }
     }
-
+    void ProcessMaxSpeedAdjustments()
+    {
+        if (maxSpeed == baseMaxSpeed) return;
+        if (lastDirectionBoost == -1 && Input.GetKey(KeyCode.A) ||
+            lastDirectionBoost == 1 && Input.GetKey(KeyCode.D))
+        {
+            lastTimeHeldInDirection = components.MScalableTime.TimeSinceLevelLoad();
+        } else
+        {
+            if (components.MScalableTime.TimeSinceLevelLoad() - lastTimeHeldInDirection > boostDecayTime)
+            {
+                maxSpeed = baseMaxSpeed;
+                lastDirectionBoost = 0;
+            }
+        }
+    }
     void HitStunState()
     {
+        
         DecreaseHitStun();
     }
     void ProcessMovement()
@@ -217,7 +265,7 @@ public class PlayerCharacter : Character
             {
                 if (horizontalMovement != 0)
                 {
-                    components.mAnimator.speed = (Mathf.Abs(currentSpeed.x) / maxSpeed);
+                    components.mAnimator.speed = (Mathf.Abs(currentSpeed.x) / baseMaxSpeed);
                     components.mAnimator.Play("run");
                 } else
                 {

@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: maxHP
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: mFaction
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: currentHP
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3893744879475517129, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: m_Color.b

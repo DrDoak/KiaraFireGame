@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1000
+  unblockable: 1
   knockback: {x: 0, y: 0}
   hitstunSeconds: 0.5
   hitstopSeconds: 0

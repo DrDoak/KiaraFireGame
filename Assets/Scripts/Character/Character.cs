@@ -15,9 +15,11 @@ public class Character : MonoBehaviour
     public StateChangedEvent ExitHitStun;
     public bool canBlock;
     // Start is called before the first frame update
+    protected float baseMaxSpeed;
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
+        baseMaxSpeed = maxSpeed;
     }
     // Update is called once per frame
     void Update()

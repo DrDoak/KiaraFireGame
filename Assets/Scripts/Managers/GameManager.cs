@@ -27,12 +27,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI pauseCurrentEnemiesText;
 
+    [SerializeField]
+    private TextMeshProUGUI timeComplete;
+    [SerializeField]
+    private TextMeshProUGUI timePause;
+
     private string nextStage;
     private bool completed;
     private bool paused = false;
 
     private int totalEnemies;
     private int defeatedEnemies;
+    private float timeLevelStarted;
+    private float totalTime;
     private void Awake()
     {
         Instance = this;
@@ -41,6 +48,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        timeLevelStarted = Time.timeSinceLevelLoad;
         mAnimator.Play("intro");
         stageNameText.text = stageName;
         
@@ -83,8 +91,10 @@ public class GameManager : MonoBehaviour
     {
         mAnimator.Play("pause");
         Time.timeScale = 0;
+        float timeSoFar = Time.timeSinceLevelLoad - timeLevelStarted; ;
         pauseTotalEnemiesText.text = totalEnemies.ToString();
         pauseCurrentEnemiesText.text = defeatedEnemies.ToString();
+        timePause.text = $"{Mathf.FloorToInt(timeSoFar/60)} Min {Mathf.FloorToInt(timeSoFar % 60)} Sec";
     }
     public void UnPause()
     {
@@ -100,11 +110,13 @@ public class GameManager : MonoBehaviour
     }
     public static void CompletedStage(string nextStageName)
     {
+        Instance.totalTime = Time.timeSinceLevelLoad - Instance.timeLevelStarted;
         Instance.totalEnemiesText.text = Instance.totalEnemies.ToString();
         Instance.currentEnemiesText.text = Instance.defeatedEnemies.ToString();
         Instance.mAnimator.Play("complete");
         Instance.nextStage = nextStageName;
         Instance.completed = true;
         Time.timeScale = 0;
+        Instance.timeComplete.text = $"{Mathf.FloorToInt(Instance.totalTime / 60)} Min {Mathf.FloorToInt(Instance.totalTime % 60)} Sec";
     }
 }

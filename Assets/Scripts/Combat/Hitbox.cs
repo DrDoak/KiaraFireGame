@@ -12,6 +12,7 @@ public class Hitbox : MonoBehaviour
     public int multiHits = 1;
     public float refreshTime = 0.15f;
     public Vector2 propelonHitConfirm;
+    public GameObject uniqueHitFX;
     public Attackable ParentAttackable { get { return parentAttackable; } }
     [SerializeField]
     private Attackable parentAttackable;

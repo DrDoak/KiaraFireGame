@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: knockback.y
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7210154377466595951, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
+      propertyPath: hitstopSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9208447438213590164, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
       propertyPath: m_Name
       value: Arrow

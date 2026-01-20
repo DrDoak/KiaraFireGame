@@ -15,7 +15,7 @@ public class LevelChange : MonoBehaviour
         if (hb == null) return;
         if (hb.ParentAttackable.GetComponent<PlayerCharacter>() != null)
         {
-            SceneManager.LoadScene(newLevel);
+            GameManager.CompletedStage(newLevel);
         }
     }
 

@@ -13,7 +13,7 @@ public class CharacterComponents : MonoBehaviour
     public Animator mAnimator;
 
     public Projectile MProjectile;
-
+    public DynamicCameraTarget camTarget;
     // Start is called before the first frame update
     void Awake()
     {

@@ -37,6 +37,19 @@ public class PlayerCharacter : Character
     [SerializeField]
     private GameObject detectionBoxDown;
 
+    [SerializeField]
+    private ParticleSystem midairavaliable;
+    [SerializeField]
+    private ParticleSystem midairRegained;
+
+    [SerializeField]
+    private ParticleSystem speedlvl1;
+    [SerializeField]
+    private ParticleSystem speedlvl2;
+    [SerializeField]
+    private TrailRenderer speedlvl3;
+
+
     private float lastTimeHeldInDirection;
     private int lastDirectionBoost;
 
@@ -106,6 +119,8 @@ public class PlayerCharacter : Character
         }
         UpdateTimers();
         ProcessState();
+        UpdateMidAirParticle();
+        UpdateMaxSpeed();
         if (currentHitStun == 0 && !components.MAnimatorOptions.InAction)
         {
             AnimateNeutral();
@@ -231,6 +246,11 @@ public class PlayerCharacter : Character
     }
     public void ReplenishMidAirJump()
     {
+        if (!hasMidAirJump && !sensors.Grounded)
+        {
+            midairRegained.Stop();
+            midairRegained.Play();
+        }
         hasMidAirJump = true;
     }
     private void Jump(bool jumpPressed, float jumpForce, float addedJumpForce, float jumpTime)
@@ -255,7 +275,7 @@ public class PlayerCharacter : Character
             _coyoteTimeCounter -= Time.deltaTime;
     }
 
-    public void AnimateNeutral()
+    private void AnimateNeutral()
     {
         components.mAnimator.speed = 1;
         if (sensors.Grounded)
@@ -287,6 +307,50 @@ public class PlayerCharacter : Character
             {
                 components.mAnimator.Play("fall");
             }
+        }
+    }
+
+    private void UpdateMidAirParticle()
+    {
+        if (sensors.Grounded && midairavaliable.isPlaying)
+        {
+            midairavaliable.Stop();
+        }
+        if (!sensors.Grounded)
+        {
+            if (hasMidAirJump && !midairavaliable.isPlaying)
+            {
+                midairavaliable.Play();
+            }
+            if (!hasMidAirJump && midairavaliable.isPlaying)
+            {
+                midairavaliable.Stop();
+            }
+        }
+    }
+
+    private void UpdateMaxSpeed()
+    {
+        Vector2 currentSpeed = components.MMovement.Velocity;
+        if (currentSpeed.magnitude < (baseMaxSpeed * 0.8f) || maxSpeed == baseMaxSpeed)
+        {
+            speedlvl1.Stop();
+            speedlvl2.Stop();
+            speedlvl3.emitting = false;
+            return;
+        }
+        float diff = (boostedMaxSpeed - baseMaxSpeed);
+        if (maxSpeed >= (baseMaxSpeed + (diff / hitsToReachMaxBoost)))
+        {
+            speedlvl1.Play();
+        }
+        if (maxSpeed >= (baseMaxSpeed + ((2* diff) / hitsToReachMaxBoost)))
+        {
+            speedlvl2.Play();
+        }
+        if (maxSpeed >= (baseMaxSpeed + ((3 * diff) / hitsToReachMaxBoost)))
+        {
+            speedlvl3.emitting = true;
         }
     }
 

@@ -16,6 +16,14 @@ public class Attackable : MonoBehaviour
     private string deathAnimation;
     [SerializeField]
     private float knockbackScale = 1;
+    [SerializeField]
+    private GameObject defaultHitVFX;
+    [SerializeField]
+    private GameObject defaultBlockVFX;
+    [SerializeField]
+    private GameObject deathVFX;
+    [SerializeField]
+    private bool registerAsEnemyTarget;
     public delegate void DeathEvent();
     public DeathEvent OnDeathCallback;
     // Start is called before the first frame update
@@ -30,12 +38,17 @@ public class Attackable : MonoBehaviour
         {
             hb.SetParent(this);
         }
+        if (registerAsEnemyTarget)
+        {
+            GameManager.RegisterEnemyTarget();
+        }
     }
     public void TakeHit(Hitbox hb, Hurtbox hurtbox)
     {
         if (!components.MCharacter.canBlock || hb.unblockable)
         {
             ChangeHP(-hb.damage);
+            TimeScaleManager.FreezeTime(hb.hitstopSeconds);
         }
         bool facingLeft = false;
         if (hb.ParentAttackable != null)
@@ -53,11 +66,24 @@ public class Attackable : MonoBehaviour
         {
             components.MCharacter.ApplyHitStun(hb.hitstunSeconds);
         }
-        TimeScaleManager.FreezeTime(hb.hitstopSeconds);
         if (hb.ParentAttackable != null)
         {
             hb.ParentAttackable.components.MAttackConfirm.OnAttackConfirm(hb, hurtbox, this);
         }
+        if (!components.MCharacter.canBlock || hb.unblockable)
+        {
+            SpawnVFX(hb, hurtbox, hb.uniqueHitFX == null ? defaultHitVFX : hb.uniqueHitFX, knockback);
+        } else
+        {
+            SpawnVFX(hb, hurtbox, defaultBlockVFX, knockback);
+        }
+    }
+
+    private void SpawnVFX(Hitbox hb, Hurtbox hurt, GameObject vfx, Vector2 knockback)
+    {
+        float angle = Mathf.Atan2(knockback.y, knockback.x);
+        Vector3 pos = (hb.transform.position + hurt.transform.position) / 2;
+        GameObject go = Instantiate(vfx, pos, Quaternion.EulerAngles(0,0,angle));
     }
     public void ChangeHP(float delta)
     {
@@ -79,6 +105,11 @@ public class Attackable : MonoBehaviour
             components.MAnimatorOptions.PlayAnimation(deathAnimation);
         } else
         {
+            if (registerAsEnemyTarget)
+            {
+                GameManager.RegisterAsDefeated();
+            }
+            Instantiate(deathVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

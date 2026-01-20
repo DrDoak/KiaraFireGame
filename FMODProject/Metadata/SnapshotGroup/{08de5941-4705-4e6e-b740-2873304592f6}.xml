@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="SnapshotList" id="{08de5941-4705-4e6e-b740-2873304592f6}">
+		<relationship name="mixer">
+			<destination>{8d6b7ba1-2548-42a7-ba77-9b76f0c6730e}</destination>
+		</relationship>
+	</object>
+</objects>

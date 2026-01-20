@@ -11,6 +11,8 @@ public class AnimatorOptions : MonoBehaviour
     private string neutralAnimation = "idle";
     [SerializeField]
     private CharacterComponents components;
+    
+
 
     public bool InAction { get { return inActionAnimation; } }
     private bool inActionAnimation;
@@ -23,8 +25,6 @@ public class AnimatorOptions : MonoBehaviour
     private void Start()
     {
         sprites = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
-        //components.mAnimator.Play(neutralAnimation, 0, Random.Range(0, 1f));
-        //sprites.ForEach(s => initialSortingSprite[s] = s.sortingOrder);
     }
 
     // Update is called once per frame
@@ -55,6 +55,7 @@ public class AnimatorOptions : MonoBehaviour
         lastAnimation = s;
         if (components != null && components.mAnimator != null)
         {
+            components.mAnimator.speed = 1;
             components.mAnimator.Play(s);
         }
     }
@@ -76,6 +77,7 @@ public class AnimatorOptions : MonoBehaviour
 
     public void DestroyNow()
     {
+        
         Destroy(gameObject);
     }
 }

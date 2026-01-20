@@ -54,7 +54,7 @@ public class BaseMovement : MonoBehaviour
         }
         toRemove.ForEach(v => fixedMovements.Remove(v));
         toRemove.Clear();
-        
+        mRigidBody.isKinematic = components.MScalableTime.TimeScale() == 0;
     }
     public bool Grounded()
     {

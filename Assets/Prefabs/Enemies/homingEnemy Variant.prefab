@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: refreshTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1222796509158904507, guid: 3bdd0c810ee93584ebe725b32a668f4f, type: 3}
+      propertyPath: hitstopSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1337812485890219162, guid: 3bdd0c810ee93584ebe725b32a668f4f, type: 3}
       propertyPath: attackAnimation
       value: 

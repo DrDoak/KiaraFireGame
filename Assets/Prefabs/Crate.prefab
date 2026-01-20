@@ -559,6 +559,7 @@ MonoBehaviour:
   MAnimatorOptions: {fileID: 5311199385086725826}
   mAnimator: {fileID: 4335840971761743693}
   MProjectile: {fileID: 0}
+  camTarget: {fileID: 0}
 --- !u!114 &989733205619822519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +589,9 @@ MonoBehaviour:
   maxHP: 10
   currentHP: 10
   deathAnimation: 
+  knockbackScale: 1
+  defaultHitVFX: {fileID: 4949895226799001607, guid: f421db02e3361d740a4a39ce0969f63f, type: 3}
+  defaultBlockVFX: {fileID: 6481531462455303601, guid: d162103bd112e0e4c8b30d4d2e8421fc, type: 3}
 --- !u!114 &990237213414030344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,12 +854,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  unblockable: 0
   knockback: {x: 0, y: 0}
   hitstunSeconds: 0.5
   hitstopSeconds: 0
   multiHits: 1
   refreshTime: 0.15
   propelonHitConfirm: {x: 0, y: 0}
+  uniqueHitFX: {fileID: 0}
   parentAttackable: {fileID: 7370593859329768097}
 --- !u!33 &3573355873995747424
 MeshFilter:

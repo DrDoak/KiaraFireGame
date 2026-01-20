@@ -25,8 +25,10 @@ public class TimeScaleManager : MonoBehaviour
     }
     public static void FreezeTime(float duration)
     {
-        Instance.freezeExpiration = Time.timeSinceLevelLoad + duration;
-        Instance.isFrozen = true;
+        if (duration > 0){
+            Instance.freezeExpiration = Time.timeSinceLevelLoad + duration;
+            Instance.isFrozen = true;
+        }
     }
     // Update is called once per frame
     void Update()

@@ -99,6 +99,7 @@ MonoBehaviour:
   multiHits: 1
   refreshTime: 0.15
   propelonHitConfirm: {x: 0, y: 0}
+  uniqueHitFX: {fileID: 0}
   parentAttackable: {fileID: 2927970420852312712}
 --- !u!33 &2587357384378090889
 MeshFilter:
@@ -195,9 +196,9 @@ Transform:
   - {fileID: 6647503110515234758}
   - {fileID: 5443065729954710759}
   - {fileID: 2026072604268208012}
-  - {fileID: 9014677199368194395}
   - {fileID: 6986958068252358384}
   - {fileID: 1635742598126693289}
+  - {fileID: 9014677199368194395}
   m_Father: {fileID: 763583683882384058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &603198576021286750
@@ -805,6 +806,7 @@ MonoBehaviour:
   MAnimatorOptions: {fileID: 603198576021286750}
   mAnimator: {fileID: 8559837201190602072}
   MProjectile: {fileID: 0}
+  camTarget: {fileID: 0}
 --- !u!114 &312832561421262740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +837,10 @@ MonoBehaviour:
   currentHP: 10
   deathAnimation: 
   knockbackScale: 1
+  defaultHitVFX: {fileID: 4949895226799001607, guid: f421db02e3361d740a4a39ce0969f63f, type: 3}
+  defaultBlockVFX: {fileID: 6481531462455303601, guid: d162103bd112e0e4c8b30d4d2e8421fc, type: 3}
+  deathVFX: {fileID: 5657198702042593030, guid: bf8d3aceaca466f47b295034a5609d85, type: 3}
+  registerAsEnemyTarget: 1
 --- !u!114 &1194760025336037968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +983,7 @@ MonoBehaviour:
   delayUntilAttack: 0.5
   delayBetweenAttacks: 1
   attackAnimation: shoot
+  renderRange: 0
   moveToPlayerSpeed: 0
   playerOffset: {x: 0, y: 0}
 --- !u!1 &8555438635104518824

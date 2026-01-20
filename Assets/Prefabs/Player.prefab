@@ -427,8 +427,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0.764151, b: 0.2807073, a: 0.7058824}
-      key1: {r: 0, g: 0.8867924, b: 0.8002413, a: 0.25882354}
+      key0: {r: 1, g: 1, b: 1, a: 0.7058824}
+      key1: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0.25882354}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -795,9 +795,10 @@ MonoBehaviour:
   currentHP: 100
   deathAnimation: 
   knockbackScale: 1
-  defaultHitVFX: {fileID: 4949895226799001607, guid: f421db02e3361d740a4a39ce0969f63f, type: 3}
+  defaultHitVFX: {fileID: 978610861562800634, guid: 5be52d9d71c144e4eafa32a5b7510623, type: 3}
   defaultBlockVFX: {fileID: 6481531462455303601, guid: d162103bd112e0e4c8b30d4d2e8421fc, type: 3}
   deathVFX: {fileID: 0}
+  registerAsEnemyTarget: 0
 --- !u!114 &7310699394447063267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1057,7 @@ Transform:
   m_GameObject: {fileID: 5013247672464469533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 2.36, z: 0}
+  m_LocalPosition: {x: 3, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

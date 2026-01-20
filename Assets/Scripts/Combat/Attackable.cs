@@ -109,7 +109,10 @@ public class Attackable : MonoBehaviour
             {
                 GameManager.RegisterAsDefeated();
             }
-            Instantiate(deathVFX, transform.position, Quaternion.identity);
+            if (deathVFX != null)
+            {
+                Instantiate(deathVFX, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }

@@ -72,6 +72,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.103773594
       objectReference: {fileID: 0}
+    - target: {fileID: 4093385529110395407, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3619845
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093385529110395407, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.762671
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093385529110395407, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2963
+      objectReference: {fileID: 0}
+    - target: {fileID: 4093385529110395407, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3921
+      objectReference: {fileID: 0}
     - target: {fileID: 5874316826644279746, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: numShots
       value: 5
@@ -79,6 +95,14 @@ PrefabInstance:
     - target: {fileID: 5874316826644279746, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: YoffsetSpread
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647503110515234758, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647503110515234758, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 7325575655420123266, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: m_Name

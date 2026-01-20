@@ -837,7 +837,7 @@ MonoBehaviour:
   addedJumpForce: 6
   jumpTime: 0.3
   CoyoteTime: 0
-  chargeTimeSmall: 1
+  chargeTimeSmall: 0.8
   chargeTimeLarge: 2
   boostedMaxSpeed: 20
   hitsToReachMaxBoost: 3

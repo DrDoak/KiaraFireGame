@@ -92,11 +92,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  unblockable: 0
   knockback: {x: 0, y: 0}
   hitstunSeconds: 0.5
   hitstopSeconds: 0
   multiHits: 1
   refreshTime: 0.15
+  propelonHitConfirm: {x: 0, y: 0}
+  uniqueHitFX: {fileID: 0}
   parentAttackable: {fileID: 0}
 --- !u!33 &398935160812798012
 MeshFilter:
@@ -407,6 +410,7 @@ MonoBehaviour:
   MAnimatorOptions: {fileID: 5919628010457648999}
   mAnimator: {fileID: 5045322263318787571}
   MProjectile: {fileID: 0}
+  camTarget: {fileID: 0}
 --- !u!114 &102348216479797988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +441,7 @@ MonoBehaviour:
   horizontalDecelerationAir: 0
   terminalVelocity: -15
   gravity: 0
+  applyYDecel: 0
 --- !u!50 &2755392397175837592
 Rigidbody2D:
   serializedVersion: 4
@@ -533,9 +538,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c402c6ace986ebb4f8b13638e51b4abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 2.5
+  lifeTime: 1
   maxHits: 1
-  initialVelocity: {x: 35, y: 0}
+  initialVelocity: {x: 45, y: 0}
+  targetPlayer: 0
+  setAngleOffset: 0
   parentAttackConfirm: {fileID: 0}
 --- !u!114 &4017947236437690239
 MonoBehaviour:
@@ -554,3 +561,8 @@ MonoBehaviour:
   maxHP: 0
   currentHP: 0
   deathAnimation: 
+  knockbackScale: 1
+  defaultHitVFX: {fileID: 0}
+  defaultBlockVFX: {fileID: 0}
+  deathVFX: {fileID: 0}
+  registerAsEnemyTarget: 0

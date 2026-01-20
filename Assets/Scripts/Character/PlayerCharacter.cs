@@ -53,6 +53,12 @@ public class PlayerCharacter : Character
     private float lastTimeHeldInDirection;
     private int lastDirectionBoost;
 
+    //Boost
+    private const float boost_delay = 0.2f;
+    private float last_boost_applied_time;
+
+    private bool useSecondSlash;
+
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
@@ -74,15 +80,7 @@ public class PlayerCharacter : Character
         {
             ReplenishMidAirJump();
         }
-        if (hb.propelonHitConfirm.magnitude != 0)
-        {
-            if (hb.propelonHitConfirm.y > 0 && components.MMovement.Velocity.y < 0)
-            {
-                components.MMovement.ResetVerticalVelocity();
-            }
-            Vector2 propel = new Vector2((components.MMovement.FacingLeft ? -1 : 1) * hb.propelonHitConfirm.x, hb.propelonHitConfirm.y);
-            components.MMovement.ApplyImpulse(propel);
-        }
+        ApplyBoost(hb);
         if (lastDirectionBoost == 0 && Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             if (Input.GetKey(KeyCode.A))
@@ -101,6 +99,27 @@ public class PlayerCharacter : Character
             maxSpeed += (boostedMaxSpeed - baseMaxSpeed) / hitsToReachMaxBoost;
         }
         maxSpeed = Mathf.Clamp(maxSpeed, baseMaxSpeed, boostedMaxSpeed);
+    }
+    private void ApplyBoost(Hitbox hb)
+    {
+        if (hb.propelonHitConfirm.magnitude == 0)
+        {
+            return;
+        }
+        if (components.MScalableTime.TimeSinceLevelLoad() - last_boost_applied_time < boost_delay)
+        {
+            return;
+        }
+        last_boost_applied_time = components.MScalableTime.TimeSinceLevelLoad();
+        if (hb.propelonHitConfirm.magnitude != 0)
+        {
+            if (hb.propelonHitConfirm.y > 0 && components.MMovement.Velocity.y < 0)
+            {
+                components.MMovement.ResetVerticalVelocity();
+            }
+            Vector2 propel = new Vector2((components.MMovement.FacingLeft ? -1 : 1) * hb.propelonHitConfirm.x, hb.propelonHitConfirm.y);
+            components.MMovement.ApplyImpulse(propel);
+        }
     }
     public bool HasSmallCharge()
     {
@@ -275,6 +294,17 @@ public class PlayerCharacter : Character
             _coyoteTimeCounter -= Time.deltaTime;
     }
 
+    public void AlternateSlash()
+    {
+        if (sensors.Grounded)
+        {
+            components.MAnimatorOptions.PerformActionAnimation(useSecondSlash ? "atk_air2" : "atk_air");
+        } else
+        {
+            components.MAnimatorOptions.PerformActionAnimation(useSecondSlash ? "atk_ground2" : "atk_ground");
+        }
+        useSecondSlash = !useSecondSlash;
+    }
     private void AnimateNeutral()
     {
         components.mAnimator.speed = 1;
@@ -286,7 +316,13 @@ public class PlayerCharacter : Character
                 if (horizontalMovement != 0)
                 {
                     components.mAnimator.speed = (Mathf.Abs(currentSpeed.x) / baseMaxSpeed);
-                    components.mAnimator.Play("run");
+                    if (currentSpeed.magnitude >= boostedMaxSpeed * 0.9f)
+                    {
+                        components.mAnimator.Play("sprint");
+                    } else
+                    {
+                        components.mAnimator.Play("run");
+                    }
                 } else
                 {
                     components.mAnimator.Play("stop");

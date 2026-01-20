@@ -10,6 +10,12 @@ public class ActiveDetectionBox : MonoBehaviour
     public float refreshTime = 0.1f;
     [SerializeField]
     private CharacterComponents components;
+    private PlayerCharacter mPlayer;
+    private void Start()
+    {
+        mPlayer = components.GetComponent<PlayerCharacter>();
+    }
+
     public void SetActive(bool isActive)
     {
 
@@ -55,6 +61,7 @@ public class ActiveDetectionBox : MonoBehaviour
                 components.MAnimatorOptions.PerformActionAnimation("atk_ground_up");
             } else
             {
+                mPlayer.AlternateSlash();
                 components.MAnimatorOptions.PerformActionAnimation("atk_ground");
             }
         } else
@@ -69,7 +76,7 @@ public class ActiveDetectionBox : MonoBehaviour
             }
             else
             {
-                components.MAnimatorOptions.PerformActionAnimation("atk_air");
+                mPlayer.AlternateSlash();
             }
         }
         timeHit[other] = components.MScalableTime.TimeSinceLevelLoad();

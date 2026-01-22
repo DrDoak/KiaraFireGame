@@ -36,9 +36,9 @@ public class GameManager : MonoBehaviour
     private bool completed;
     private bool paused = false;
 
-    private int totalEnemies;
-    private int defeatedEnemies;
-    private float timeLevelStarted;
+    public int totalEnemies;
+    public int defeatedEnemies;
+    public float timeElapsed;
     private float totalTime;
     private void Awake()
     {
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
-        timeLevelStarted = Time.timeSinceLevelLoad;
+        timeElapsed = 0;
         mAnimator.Play("intro");
         stageNameText.text = stageName;
         
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeElapsed += Time.deltaTime;
         CheckPlayerDeleted();
         initiated = true;
         if (completed == true && Input.GetKeyDown(KeyCode.Return))
@@ -91,7 +92,7 @@ public class GameManager : MonoBehaviour
     {
         mAnimator.Play("pause");
         Time.timeScale = 0;
-        float timeSoFar = Time.timeSinceLevelLoad - timeLevelStarted; ;
+        float timeSoFar = timeElapsed;
         pauseTotalEnemiesText.text = totalEnemies.ToString();
         pauseCurrentEnemiesText.text = defeatedEnemies.ToString();
         timePause.text = $"{Mathf.FloorToInt(timeSoFar/60)} Min {Mathf.FloorToInt(timeSoFar % 60)} Sec";
@@ -110,7 +111,7 @@ public class GameManager : MonoBehaviour
     }
     public static void CompletedStage(string nextStageName)
     {
-        Instance.totalTime = Time.timeSinceLevelLoad - Instance.timeLevelStarted;
+        Instance.totalTime = Instance.timeElapsed;
         Instance.totalEnemiesText.text = Instance.totalEnemies.ToString();
         Instance.currentEnemiesText.text = Instance.defeatedEnemies.ToString();
         Instance.mAnimator.Play("complete");

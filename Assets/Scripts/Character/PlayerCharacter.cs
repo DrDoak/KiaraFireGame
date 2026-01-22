@@ -64,7 +64,8 @@ public class PlayerCharacter : Character
     private float last_boost_applied_time;
 
     private bool useSecondSlash;
-
+    [SerializeField]
+    private bool burn;
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
@@ -141,6 +142,10 @@ public class PlayerCharacter : Character
         if (components.MMovement.Grounded())
         {
             ReplenishMidAirJump();
+        }
+        if (burn)
+        {
+            components.MAttackable.ChangeHP(-components.MScalableTime.DeltaTime);
         }
         UpdateTimers();
         ProcessState();

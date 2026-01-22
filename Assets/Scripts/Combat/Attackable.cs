@@ -5,6 +5,8 @@ public enum Faction { FRIENDLY, ENEMY, NEUTRAL, INVINCIBLE}
 public class Attackable : MonoBehaviour
 {
     public Faction MyFaction {get {return mFaction;} set { mFaction = value; } }
+    public float MaxHP { get { return maxHP; } set { maxHP = value; } }
+    public float CurrentHP { get { return currentHP; } set { currentHP = value; } }
     public CharacterComponents components;
     [SerializeField]
     private Faction mFaction;

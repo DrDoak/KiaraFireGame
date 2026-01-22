@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4256693b-6f79-40d9-a7e6-0750c115cac6}">
+		<property name="assetPath">
+			<value>UISFX/digital_note.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4a2c4bc5-7854-439f-8f8d-225a887db9bf}</destination>
+		</relationship>
+	</object>
+</objects>

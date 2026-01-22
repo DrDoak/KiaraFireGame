@@ -217,6 +217,7 @@ MonoBehaviour:
   canTurn: 1
   neutralAnimation: idle
   components: {fileID: 3672542124892092302}
+  stepSFX: step
 --- !u!95 &8559837201190602072
 Animator:
   serializedVersion: 5
@@ -761,6 +762,7 @@ GameObject:
   - component: {fileID: 1663165494305035978}
   - component: {fileID: 5893396006297396736}
   - component: {fileID: 4984250951427873020}
+  - component: {fileID: 2138841914200027948}
   m_Layer: 3
   m_Name: GroundEnemy
   m_TagString: Untagged
@@ -805,6 +807,7 @@ MonoBehaviour:
   MAttackConfirm: {fileID: 1191594389982272459}
   MAnimatorOptions: {fileID: 603198576021286750}
   mAnimator: {fileID: 8559837201190602072}
+  mAudio: {fileID: 0}
   MProjectile: {fileID: 0}
   camTarget: {fileID: 0}
 --- !u!114 &312832561421262740
@@ -836,6 +839,7 @@ MonoBehaviour:
   maxHP: 10
   currentHP: 10
   deathAnimation: 
+  deathSFX: Enemy_death_whoosh
   knockbackScale: 1
   defaultHitVFX: {fileID: 4949895226799001607, guid: f421db02e3361d740a4a39ce0969f63f, type: 3}
   defaultBlockVFX: {fileID: 6481531462455303601, guid: d162103bd112e0e4c8b30d4d2e8421fc, type: 3}
@@ -979,6 +983,7 @@ MonoBehaviour:
   acceleration: 8
   maxSpeed: 8
   canBlock: 0
+  landingSFX: landing
   characterDetectionZone: 10
   delayUntilAttack: 0.5
   delayBetweenAttacks: 1
@@ -986,6 +991,20 @@ MonoBehaviour:
   renderRange: 0
   moveToPlayerSpeed: 0
   playerOffset: {x: 0, y: 0}
+--- !u!114 &2138841914200027948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325575655420123266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdef588f3d9a9074eb30cba884ded893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventList: {fileID: 11400000, guid: 1a138b7aa07efc34fa87522cd28599c5, type: 2}
+  events: []
 --- !u!1 &8555438635104518824
 GameObject:
   m_ObjectHideFlags: 0

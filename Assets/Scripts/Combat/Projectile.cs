@@ -15,6 +15,8 @@ public class Projectile : MonoBehaviour
     private bool targetPlayer;
     [SerializeField]
     private float setAngleOffset = 0;
+    [SerializeField]
+    private string hitSFX;
 
     private int numHits;
     private float expirationTime;
@@ -80,6 +82,14 @@ public class Projectile : MonoBehaviour
     public void ProjectileAttackConfirm(Hitbox hb, Hurtbox hurt, Attackable attackedObj)
     {
         numHits++;
+        if (components == null)
+        {
+            components = GetComponent<CharacterComponents>();
+        }
+        if (hitSFX != null && components.mAudio != null)
+        {
+            components.mAudio.PlaySounds(hitSFX);
+        }
         if (numHits >= maxHits)
         {
             ProjectileDespawn();

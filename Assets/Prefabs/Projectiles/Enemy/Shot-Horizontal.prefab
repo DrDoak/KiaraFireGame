@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1407603982767956600, guid: af3338c8715a78141963a8eacccea2ad, type: 3}
+      propertyPath: hitSFX
+      value: Shot_hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407603982767956600, guid: af3338c8715a78141963a8eacccea2ad, type: 3}
       propertyPath: initialVelocity.x
       value: 10
       objectReference: {fileID: 0}

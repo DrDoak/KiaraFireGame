@@ -49,6 +49,12 @@ public class PlayerCharacter : Character
     [SerializeField]
     private TrailRenderer speedlvl3;
 
+    [SerializeField]
+    private string jumpSFX;
+    [SerializeField]
+    private string doublejumpSFX;
+    [SerializeField]
+    private GameObject doubleJumpVFX;
 
     private float lastTimeHeldInDirection;
     private int lastDirectionBoost;
@@ -234,12 +240,24 @@ public class PlayerCharacter : Character
         {
             _coyoteTimeCounter = 0;
             _jumpTimeCounter = jumpTime;
+            
+        }
+        if (jumpPressedFrame && sensors.Grounded && jumpSFX != "") { 
+            components.mAudio.PlaySounds(jumpSFX);
         }
         if (jumpPressedFrame && !sensors.Grounded && hasMidAirJump)
         {
             _jumpTimeCounter = jumpTime;
             components.MMovement.ResetVerticalVelocity();
             hasMidAirJump = false;
+            if (doublejumpSFX != "")
+            {
+                components.mAudio.PlaySounds(doublejumpSFX);
+            }
+            if (doubleJumpVFX != null)
+            {
+                components.mSpawner.SpawnObject(doubleJumpVFX);
+            }
         }
 
         // check if the ceiling was hit

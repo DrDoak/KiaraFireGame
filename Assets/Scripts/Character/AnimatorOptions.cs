@@ -11,6 +11,8 @@ public class AnimatorOptions : MonoBehaviour
     private string neutralAnimation = "idle";
     [SerializeField]
     private CharacterComponents components;
+    [SerializeField]
+    private string stepSFX = "step";
     
 
 
@@ -79,5 +81,17 @@ public class AnimatorOptions : MonoBehaviour
     {
         
         Destroy(gameObject);
+    }
+
+    public void PlaySFX(string sfx)
+    {
+        components.mAudio.PlaySounds(sfx);
+    }
+    public void PlayStepSFX()
+    {
+        if (stepSFX != "")
+        {
+            components.mAudio.PlaySounds(stepSFX);
+        }
     }
 }

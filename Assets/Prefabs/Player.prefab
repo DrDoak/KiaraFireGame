@@ -165,6 +165,7 @@ MonoBehaviour:
   canTurn: 1
   neutralAnimation: idle
   components: {fileID: 7383203643925137685}
+  stepSFX: step
 --- !u!95 &1571323008288476694
 Animator:
   serializedVersion: 5
@@ -719,6 +720,7 @@ GameObject:
   - component: {fileID: 966668517766631639}
   - component: {fileID: 2790067682573674944}
   - component: {fileID: 5260542712614848995}
+  - component: {fileID: 5661586804297382618}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -763,6 +765,8 @@ MonoBehaviour:
   MAttackConfirm: {fileID: 966668517766631639}
   MAnimatorOptions: {fileID: 3202087188407462230}
   mAnimator: {fileID: 1571323008288476694}
+  mAudio: {fileID: 0}
+  mSpawner: {fileID: 0}
   MProjectile: {fileID: 0}
   camTarget: {fileID: 8892175337154324025}
 --- !u!114 &6893026538596862168
@@ -794,6 +798,7 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 100
   deathAnimation: 
+  deathSFX: 
   knockbackScale: 1
   defaultHitVFX: {fileID: 978610861562800634, guid: 5be52d9d71c144e4eafa32a5b7510623, type: 3}
   defaultBlockVFX: {fileID: 6481531462455303601, guid: d162103bd112e0e4c8b30d4d2e8421fc, type: 3}
@@ -833,6 +838,7 @@ MonoBehaviour:
   acceleration: 2
   maxSpeed: 12
   canBlock: 0
+  landingSFX: landing
   jumpForce: 15
   addedJumpForce: 6
   jumpTime: 0.3
@@ -850,6 +856,9 @@ MonoBehaviour:
   speedlvl1: {fileID: 1239686306394611537}
   speedlvl2: {fileID: 7813754397527330869}
   speedlvl3: {fileID: 8278797631467310414}
+  jumpSFX: jump
+  doublejumpSFX: jump
+  doubleJumpVFX: {fileID: 6481531462455303601, guid: 2204e317066811240956b66f37c7e926, type: 3}
 --- !u!50 &6146279554324544474
 Rigidbody2D:
   serializedVersion: 4
@@ -954,6 +963,20 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &5661586804297382618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607008753252246901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdef588f3d9a9074eb30cba884ded893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventList: {fileID: 11400000, guid: 1a138b7aa07efc34fa87522cd28599c5, type: 2}
+  events: []
 --- !u!1 &4935013010340413532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1368,7 @@ Transform:
   m_GameObject: {fileID: 7436470248763925177}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.99, y: 0.89, z: 0}
+  m_LocalPosition: {x: -1.087, y: 1.434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

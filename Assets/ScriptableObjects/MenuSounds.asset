@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24dc8153415cf2b469536be693adf494, type: 3}
+  m_Name: MenuSounds
+  m_EditorClassIdentifier: 
+  allSounds:
+  - Guid:
+      Data1: -758302866
+      Data2: 1278246086
+      Data3: 680239780
+      Data4: -456694263
+    Path: event:/UISFX/Pause
+  - Guid:
+      Data1: 1756741960
+      Data2: 1124601266
+      Data3: 596733598
+      Data4: -2075807630
+    Path: event:/UISFX/UnPause
+  - Guid:
+      Data1: -399792518
+      Data2: 1220396591
+      Data3: 802420390
+      Data4: 825272135
+    Path: event:/UISFX/MenuClick
+  - Guid:
+      Data1: 1049485210
+      Data2: 1136517361
+      Data3: -1241353059
+      Data4: -1259257370
+    Path: event:/UISFX/InfoNote

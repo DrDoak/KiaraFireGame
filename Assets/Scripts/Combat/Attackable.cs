@@ -15,6 +15,8 @@ public class Attackable : MonoBehaviour
     [SerializeField]
     private string deathAnimation;
     [SerializeField]
+    private string deathSFX;
+    [SerializeField]
     private float knockbackScale = 1;
     [SerializeField]
     private GameObject defaultHitVFX;
@@ -105,6 +107,10 @@ public class Attackable : MonoBehaviour
             components.MAnimatorOptions.PlayAnimation(deathAnimation);
         } else
         {
+            if (deathSFX != "")
+            {
+                components.mAudio.PlaySounds(deathSFX);
+            }
             if (registerAsEnemyTarget)
             {
                 GameManager.RegisterAsDefeated();

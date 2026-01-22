@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 199242334471811753, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
+      propertyPath: hitSFX
+      value: Shot_hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242334471811753, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
       propertyPath: lifeTime
       value: 3
       objectReference: {fileID: 0}

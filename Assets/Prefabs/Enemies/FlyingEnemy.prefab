@@ -165,6 +165,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: deathSFX
+      value: Enemy_death_flying
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: currentHP
       value: 10
       objectReference: {fileID: 0}

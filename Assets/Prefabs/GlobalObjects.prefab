@@ -1261,7 +1261,7 @@ Transform:
   m_GameObject: {fileID: 2795543951834466255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -270.23523, y: -10.297279, z: -15.296571}
+  m_LocalPosition: {x: -270.23523, y: -12.69728, z: -15.296571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4246,6 +4246,7 @@ GameObject:
   - component: {fileID: 8674218027643246348}
   - component: {fileID: 178104076214658088}
   - component: {fileID: 6751462555391598531}
+  - component: {fileID: 1473087384174261301}
   m_Layer: 0
   m_Name: GlobalObjects
   m_TagString: Untagged
@@ -4318,6 +4319,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1473087384174261301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144245962433293457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772a1cefc748ad34f90e9569d9d1d171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environmentAudio: []
 --- !u!1 &8441121349152822853
 GameObject:
   m_ObjectHideFlags: 0

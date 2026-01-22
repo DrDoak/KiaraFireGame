@@ -11,6 +11,8 @@ public class CharacterComponents : MonoBehaviour
     public AttackConfirm MAttackConfirm;
     public AnimatorOptions MAnimatorOptions;
     public Animator mAnimator;
+    public AudioComponent mAudio;
+    public Spawner mSpawner;
 
     public Projectile MProjectile;
     public DynamicCameraTarget camTarget;
@@ -25,5 +27,7 @@ public class CharacterComponents : MonoBehaviour
         MProjectile = GetComponent<Projectile>();
         MAnimatorOptions = GetComponentInChildren<AnimatorOptions>();
         mAnimator = GetComponentInChildren<Animator>();
+        mAudio = GetComponent<AudioComponent>();
+        mSpawner = GetComponentInChildren<Spawner>();
     }
 }

@@ -16,6 +16,9 @@ public class Character : MonoBehaviour
     public bool canBlock;
     // Start is called before the first frame update
     protected float baseMaxSpeed;
+    [SerializeField]
+    private string landingSFX = "landing";
+    private bool lastOnGrounded;
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
@@ -25,6 +28,14 @@ public class Character : MonoBehaviour
     void Update()
     {
         DecreaseHitStun();
+    }
+    protected void UpdateLandingSFX()
+    {
+        if (components.MMovement.Grounded() && !lastOnGrounded && landingSFX != "")
+        {
+            components.mAudio.PlaySounds(landingSFX);
+        }
+        lastOnGrounded = components.MMovement.Grounded();
     }
     public void ApplyHitStun(float hitstun)
     {

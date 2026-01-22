@@ -64,13 +64,17 @@ public class Spawner : MonoBehaviour
             }
         }
     }
-    private GameObject SpawnObject(GameObject obj)
+    public GameObject SpawnObject(GameObject obj)
     {
         if (obj == null) return null;
-        GameObject newObj = Instantiate(objectToSpawn, transform.position, Quaternion.identity);
+        GameObject newObj = Instantiate(obj, transform.position, Quaternion.identity);
         if (newObj.GetComponent<BaseMovement>() != null)
         {
             newObj.GetComponent<BaseMovement>().SetFacingLeft(components.MMovement.FacingLeft);
+        } else
+        {
+            newObj.transform.localScale = new Vector3((components.MMovement.FacingLeft ? -1 : 1) * newObj.transform.localScale.x,
+                newObj.transform.localScale.y, newObj.transform.localScale.z);
         }
         if (newObj.GetComponent<Projectile>() != null)
         {

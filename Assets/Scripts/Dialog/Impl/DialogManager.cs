@@ -26,6 +26,7 @@ public class DialogManager : MonoBehaviour, IDialogManager
     public static bool IsDialogPlaying {get { return Instance.dialogPlaying; } }
     private bool dialogPlaying;
     private List<DialogSequence> hasPlayedDialogSequence = new List<DialogSequence>();
+    public string defaultTypeSFX;
     private bool isSkippingText = false;
     public static RespondToDialogSignal DialogSignalEvent;
     public static RespondToDialogStringSignal DialogStringSignalEvent;
@@ -160,6 +161,9 @@ public class DialogManager : MonoBehaviour, IDialogManager
             currentDialog.dialogSettings.visualOptions.speaker.replacementTypeSFX != "")
         {
             DialogManager.PlayAudioClip(currentDialog.dialogSettings.visualOptions.speaker.replacementTypeSFX);
+        } else if (currentDialog != null && defaultTypeSFX != "")
+        {
+            PlayAudioClip(defaultTypeSFX);
         }
     }
     public void Open()

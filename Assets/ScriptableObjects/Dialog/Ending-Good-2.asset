@@ -57,10 +57,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "What\u2019s the point? We\u2019ll still only see each other a few
@@ -107,10 +109,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Then we just have to make those minutes matter!\r"
@@ -156,10 +160,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: " It\u2019s something you learn to appreciate when hanging around mortals.\r"
@@ -205,10 +211,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "They really know how to enjoy the time they do have. They do so many
@@ -255,10 +263,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Why does that matter for a reaper?\r"
@@ -304,10 +314,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Ah\u2026 who knows\u2026 maybe things can change. This world is full
@@ -354,10 +366,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Ah\u2026 looks like my time is almost up.\r\n"
@@ -403,10 +417,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Until we meet again\u2026"
@@ -452,10 +468,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endg4
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: TitleScene
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   nextDialog: {fileID: 0}

@@ -42,7 +42,7 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        stopMusic: 0
+        stopMusic: 1
         addExtraLayer: 0
         ambienceEvent:
           Guid:
@@ -51,15 +51,17 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        stopAmbience: 0
+        stopAmbience: 1
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 
@@ -105,10 +107,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-end1
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Have you completed everything you needed?
@@ -154,10 +158,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "It\u2019s done."
@@ -203,10 +209,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "The evil force has been vanquished\u2026 not one remains\u2026"
@@ -252,10 +260,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Well, that is it then. I should continue on with my part.
@@ -301,10 +311,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endo2
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: No need to rush
@@ -350,10 +362,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endg2
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "After all\u2026 I\u2019m about to burn away anyways, right?"
@@ -399,10 +413,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Let\u2019s enjoy this little moment while I\u2019m still here."
@@ -448,10 +464,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endg3
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   nextDialog: {fileID: 11400000, guid: 3489f8340a117fc4f88026fe1cd0fba2, type: 2}

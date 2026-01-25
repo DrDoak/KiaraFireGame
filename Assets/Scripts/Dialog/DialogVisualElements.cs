@@ -84,8 +84,14 @@ public class DialogVisualElements : MonoBehaviour
     
     public static void DialogClose()
     {
-        Instance.leftSpeaker.DeactivateSpeaker();
-        Instance.rightSpeaker.DeactivateSpeaker();
+        if (Instance.leftSpeaker != null)
+        {
+            Instance.leftSpeaker.DeactivateSpeaker();
+        }
+        if (Instance.rightSpeaker != null)
+        {
+            Instance.rightSpeaker.DeactivateSpeaker();
+        }
         Instance.DeleteCutsceneObj();
     }
     private void ProcessShowImage(DialogCutsceneSettings cutsceneSettings)

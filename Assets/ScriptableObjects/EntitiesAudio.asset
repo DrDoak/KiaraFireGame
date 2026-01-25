@@ -127,3 +127,39 @@ MonoBehaviour:
       Data3: 776628896
       Data4: 673497437
     Path: event:/SFX/Enemy_death_whoosh
+  - Guid:
+      Data1: 1575697437
+      Data2: 1316736109
+      Data3: 1455170738
+      Data4: -2129398906
+    Path: event:/SFX/Enemy_death_shatter
+  - Guid:
+      Data1: -1352730852
+      Data2: 1130574456
+      Data3: 817237919
+      Data4: 52660425
+    Path: event:/SFX/Enemy_death_boss
+  - Guid:
+      Data1: 2139710645
+      Data2: 1231839355
+      Data3: 1511509439
+      Data4: 1516262574
+    Path: event:/SFX/Have_charge
+  - Guid:
+      Data1: 1031808197
+      Data2: 1163774050
+      Data3: -996663664
+      Data4: 1888608917
+    Path: event:/SFX/Sizzle
+  - Guid:
+      Data1: 290966374
+      Data2: 1080420681
+      Data3: -1851103339
+      Data4: -427197008
+    Path: event:/SFX/Burn-loud
+  - Guid:
+      Data1: 1253342510
+      Data2: 1099494341
+      Data3: -1725219654
+      Data4: 795334513
+    Path: event:/SFX/warp

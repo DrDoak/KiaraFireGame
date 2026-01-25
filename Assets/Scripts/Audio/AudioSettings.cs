@@ -7,9 +7,15 @@ public class AudioSettings : MonoBehaviour
 {
     public Slider volumeSlider;
     public Slider sfxSlider;
+    public AudioComponent mAudio;
 
+    private void Start()
+    {
+        mAudio = GetComponent<AudioComponent>();
+    }
     private void OnEnable()
     {
+        
         InitializeSettings();
     }
     public void InitializeSettings()

@@ -244,6 +244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasControl: 1
   canTurn: 1
+  cancelOnGrounded: 0
+  applyImpulse: {x: 0, y: 0}
   neutralAnimation: idle
   components: {fileID: 0}
   stepSFX: step
@@ -515,6 +517,7 @@ GameObject:
   - component: {fileID: 8128461715982849814}
   - component: {fileID: 5685251835759193202}
   - component: {fileID: 4726699873212178175}
+  - component: {fileID: 9199240583206483977}
   m_Layer: 6
   m_Name: Crate
   m_TagString: Untagged
@@ -592,7 +595,7 @@ MonoBehaviour:
   maxHP: 10
   currentHP: 10
   deathAnimation: 
-  deathSFX: 
+  deathSFX: Enemy_death_whoosh
   knockbackScale: 1
   defaultHitVFX: {fileID: 4949895226799001607, guid: f421db02e3361d740a4a39ce0969f63f, type: 3}
   defaultBlockVFX: {fileID: 6481531462455303601, guid: d162103bd112e0e4c8b30d4d2e8421fc, type: 3}
@@ -736,7 +739,22 @@ MonoBehaviour:
   acceleration: 0
   maxSpeed: 0
   canBlock: 0
+  canTurn: 0
   landingSFX: landing
+--- !u!114 &9199240583206483977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008828476440451241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdef588f3d9a9074eb30cba884ded893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEventList: {fileID: 11400000, guid: 1a138b7aa07efc34fa87522cd28599c5, type: 2}
+  events: []
 --- !u!1 &7935735151668358342
 GameObject:
   m_ObjectHideFlags: 0

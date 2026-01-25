@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{aaa74502-2e70-4297-bfd4-65687a0ef61b}">
+		<property name="assetPath">
+			<value>SFX/burn-loud.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>9</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4a2c4bc5-7854-439f-8f8d-225a887db9bf}</destination>
+		</relationship>
+	</object>
+</objects>

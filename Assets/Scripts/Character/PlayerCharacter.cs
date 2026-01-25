@@ -152,7 +152,7 @@ public class PlayerCharacter : Character
         }
         UpdateTimers();
         ProcessState();
-        UpdateMidAirParticle();
+        UpdateChargeParticles();
         UpdateMaxSpeed();
         if (currentHitStun == 0 && !components.MAnimatorOptions.InAction)
         {
@@ -314,11 +314,6 @@ public class PlayerCharacter : Character
     }
     public void ReplenishMidAirJump()
     {
-        if (!hasMidAirJump && !sensors.Grounded)
-        {
-            midairRegained.Stop();
-            midairRegained.Play();
-        }
         hasMidAirJump = true;
     }
     private void Jump(bool jumpPressed, float jumpForce, float addedJumpForce, float jumpTime)
@@ -395,22 +390,18 @@ public class PlayerCharacter : Character
         }
     }
 
-    private void UpdateMidAirParticle()
+    private void UpdateChargeParticles()
     {
-        if (sensors.Grounded && midairavaliable.isPlaying)
+        if (HasSmallCharge() && !midairavaliable.isPlaying)
+        {
+            midairavaliable.Play();
+            midairRegained.Stop();
+            midairRegained.Play();
+            components.mAudio.PlaySounds("Have_charge");
+        }
+        if (!HasSmallCharge() && midairavaliable.isPlaying)
         {
             midairavaliable.Stop();
-        }
-        if (!sensors.Grounded)
-        {
-            if (hasMidAirJump && !midairavaliable.isPlaying)
-            {
-                midairavaliable.Play();
-            }
-            if (!hasMidAirJump && midairavaliable.isPlaying)
-            {
-                midairavaliable.Stop();
-            }
         }
     }
 

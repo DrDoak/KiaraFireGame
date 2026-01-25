@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
-
 public class AudioManager : MonoBehaviour
 {
     private FMOD.Studio.EventInstance mMusicEvent;
@@ -23,9 +22,19 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this; 
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);    //If there is a second instance of this class destroy it and just return
+            return;
+        }
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
+        DontDestroyOnLoad(gameObject);
+
     }
 
     private void Start()
@@ -47,18 +56,6 @@ public class AudioManager : MonoBehaviour
         {
             settingsPanel.InitializeSettings();
         }
-    }
-
-    private void InitializeAmbience(EventReference ambienceEventReference)
-    {
-        ambienceEventInstance = RuntimeManager.CreateInstance(ambienceEventReference);
-        ambienceEventInstance.start();
-    }
-
-    private void InitializeMusic(EventReference musicEventReference)
-    {
-        musicEventInstance = RuntimeManager.CreateInstance(musicEventReference);
-        musicEventInstance.start();
     }
 
     public void SetAmbienceParameter(string parameterName, float parameterValue)
@@ -160,15 +157,20 @@ public class AudioManager : MonoBehaviour
 
     private void CleanUp()
     {
-        foreach(EventInstance eventInstance in eventInstances)
+        if (eventInstances != null)
         {
-            eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            eventInstance.release();
+            foreach (EventInstance eventInstance in eventInstances)
+            {
+                eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                eventInstance.release();
+            }
         }
-
-        foreach(StudioEventEmitter emitter in eventEmitters)
+        if (eventEmitters != null)
         {
-            emitter.Stop();
+            foreach (StudioEventEmitter emitter in eventEmitters)
+            {
+                emitter.Stop();
+            }
         }
     }
 

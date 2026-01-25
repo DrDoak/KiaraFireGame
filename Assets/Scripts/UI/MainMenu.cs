@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using FMODUnity;
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,10 +17,13 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     private Button startButton;
     private string sceneName = "none";
+    [SerializeField]
+    private EventReference startMusicEvent;
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.PlayMusic(startMusicEvent);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -39,7 +43,7 @@ public class MainMenu : MonoBehaviour
         {
             bestTime.text = "";
         }
-        
+        GetComponent<AudioComponent>().PlaySounds("MenuClick");
         startButton.interactable = (sceneName != "none");
     }
     public void LoadSelectedScene()
@@ -59,6 +63,7 @@ public class MainMenu : MonoBehaviour
     }
     public void ToggleObjects(GameObject obj)
     {
+        GetComponent<AudioComponent>().PlaySounds("MenuClick");
         obj.SetActive(!obj.activeSelf);
         if (!obj.activeSelf)
         {

@@ -37,11 +37,11 @@ MonoBehaviour:
         forcePause: 0.2
         startMusicEvent:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: -753877977
+            Data2: 1240755657
+            Data3: 1220055223
+            Data4: 71693227
+          Path: event:/Ambiance/Desert_ambiance
         stopMusic: 0
         addExtraLayer: 0
         ambienceEvent:
@@ -56,10 +56,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 
@@ -105,10 +107,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-1
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Oh Humanity
@@ -154,10 +158,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-2-loop
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Always keeping me busy.
@@ -203,10 +209,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 
@@ -252,10 +260,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-3-slash
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   nextDialog: {fileID: 11400000, guid: 06e79ad7f1da17d4abd409aeb3df6b4b, type: 2}

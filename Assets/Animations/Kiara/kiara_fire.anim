@@ -910,6 +910,13 @@ AnimationClip:
   m_Events:
   - time: 0.083333336
     functionName: PlaySFX
+    data: Slash
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.1
+    functionName: PlaySFX
     data: Fire_projectile
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

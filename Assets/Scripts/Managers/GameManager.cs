@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
-
+using FMODUnity;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     public int defeatedEnemies;
     public float timeElapsed;
     private float totalTime;
+    [SerializeField]
+    private EventReference startMusicEvent;
+    [SerializeField]
+    private AudioComponent audioManager;
     private void Awake()
     {
         Instance = this;
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
         introStageName.text = stageName;
         pauseStageNamText.text = stageName;
         mAnimator.Play("intro");
+        AudioManager.PlayMusic(startMusicEvent);
         
     }
     public static void RegisterEnemyTarget()
@@ -98,10 +103,12 @@ public class GameManager : MonoBehaviour
         pauseTotalEnemiesText.text = totalEnemies.ToString();
         pauseCurrentEnemiesText.text = defeatedEnemies.ToString();
         timePause.text = $"{timeSoFar.ToString("F2")} sec";
+        audioManager.PlaySounds("Pause");
     }
     public void UnPause()
     {
         mAnimator.Play("unpause");
+        audioManager.PlaySounds("UnPause");
         Time.timeScale = 1;
     }
     public void ReturnToMenu()
@@ -117,7 +124,10 @@ public class GameManager : MonoBehaviour
     }
     public static void CompletedStage(string nextstage)
     {
+        AudioManager.StopAllMusic();
+        AudioManager.StopAllAmbience();
         Instance.mAnimator.Play("complete");
+        Instance.audioManager.PlaySounds("InfoNote");
         Instance.nextStage = nextstage;
         Instance.completed = true;
         Time.timeScale = 0;

@@ -34,7 +34,7 @@ MonoBehaviour:
         showImage: {fileID: 0}
         showObject: {fileID: 0}
         playAnimation: 
-        forcePause: 1
+        forcePause: 0.1
         startMusicEvent:
           Guid:
             Data1: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        stopMusic: 0
+        stopMusic: 1
         addExtraLayer: 0
         ambienceEvent:
           Guid:
@@ -51,15 +51,17 @@ MonoBehaviour:
             Data3: 0
             Data4: 0
           Path: 
-        stopAmbience: 0
+        stopAmbience: 1
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 
@@ -105,10 +107,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-end1
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: So... Have you completed everything you needed?
@@ -154,10 +158,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Enough for one life. The important things at least.
@@ -205,10 +211,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "There are always a few regrets, a few things that I missed. But that\u2019s
@@ -255,10 +263,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: In that case.
@@ -304,10 +314,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endo2
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Until next time then\u2026 Kiara\r\n"
@@ -353,13 +365,15 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endo3
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: 'Calli... '
+  - richText: One more thing Calli...
     dialogSettings:
       options: []
       visualOptions:
@@ -402,10 +416,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Yes?
@@ -451,13 +467,15 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "You know, I won\u2019t say I am exactly eager to see you again."
+  - richText: "I won\u2019t say I am exactly eager to see you again."
     dialogSettings:
       options: []
       visualOptions:
@@ -500,10 +518,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "But when the time comes again\u2026"
@@ -549,10 +569,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: I'm thinking we can arrange something... a date maybe?
@@ -598,10 +620,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 
@@ -647,10 +671,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endo4
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "date\u2026.?"
@@ -696,10 +722,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Phoenixes are so weird.
@@ -745,10 +773,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'but... '
@@ -794,13 +824,15 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: I'll... I'll think about it.
+  - richText: maybe...
     dialogSettings:
       options: []
       visualOptions:
@@ -843,10 +875,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endo5
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: TitleScene
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   nextDialog: {fileID: 0}

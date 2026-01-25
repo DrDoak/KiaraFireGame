@@ -2,6 +2,7 @@ using System;
 using JetBrains.Annotations;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using FMODUnity;
 
 [Serializable]
@@ -144,6 +145,7 @@ public class DialogActions
     public DialogSignal emitSignal;
     public string emitStringSignal;
     public string playSFX;
+    public string loadWorld;
     //public WorldData loadWorld;
 
     public void TriggerActions()
@@ -161,9 +163,9 @@ public class DialogActions
         {
             DialogManager.PlayAudioClip(playSFX);
         }
-        //if (loadWorld != null)
-        //{
-        //    WorldManager.LoadNewWorld(loadWorld);
-        //}
+        if (loadWorld != null && loadWorld != "")
+        {
+            SceneManager.LoadScene(loadWorld);
+        }
     }
 }

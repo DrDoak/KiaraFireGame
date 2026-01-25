@@ -20,6 +20,7 @@ public class AudioEventList : ScriptableObject
             return soundMap[key.ToLower()];
         } else
         {
+            Debug.Log("Event NOT FOUND: " + key);
             return soundMap["first"];
         }
         

@@ -37,3 +37,15 @@ MonoBehaviour:
       Data3: -1241353059
       Data4: -1259257370
     Path: event:/UISFX/InfoNote
+  - Guid:
+      Data1: -1461705132
+      Data2: 1176388251
+      Data3: 1958006156
+      Data4: -632510078
+    Path: event:/UISFX/TypingSFX
+  - Guid:
+      Data1: -716166242
+      Data2: 1318172252
+      Data3: -53105495
+      Data4: 412098414
+    Path: event:/SFX/Slash

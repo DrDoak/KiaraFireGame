@@ -60,8 +60,10 @@ public class PlayerCharacter : Character
     private int lastDirectionBoost;
 
     //Boost
-    private const float boost_delay = 0.2f;
+    private const float boost_delay = 0.05f;
     private float last_boost_applied_time;
+    public float FireCooldown { get { return fireCooldown; } }
+    private float fireCooldown;
 
     private bool useSecondSlash;
     [SerializeField]
@@ -120,7 +122,7 @@ public class PlayerCharacter : Character
         last_boost_applied_time = components.MScalableTime.TimeSinceLevelLoad();
         if (hb.propelonHitConfirm.magnitude != 0)
         {
-            if (hb.propelonHitConfirm.y > 0 && components.MMovement.Velocity.y < 0)
+            if (hb.propelonHitConfirm.y != 0)
             {
                 components.MMovement.ResetVerticalVelocity();
             }
@@ -139,6 +141,7 @@ public class PlayerCharacter : Character
     // Update is called once per frame
     void Update()
     {
+        fireCooldown = Mathf.Max(0, fireCooldown - components.MScalableTime.DeltaTime);
         if (components.MMovement.Grounded())
         {
             ReplenishMidAirJump();
@@ -203,12 +206,19 @@ public class PlayerCharacter : Character
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) horizontalMovement--;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.UpArrow)) horizontalMovement++;
         AttemptHorizontalMovement(horizontalMovement);
-        HandleJump(Input.GetKey(KeyCode.Space), Input.GetKeyDown(KeyCode.Space));
+        if (!attemptingDive())
+        {
+            HandleJump(Input.GetKey(KeyCode.Space), Input.GetKeyDown(KeyCode.Space));
+        }
         canBlock = !Input.GetKey(KeyCode.J);
-        UpdateHoldAttack(!canBlock);
+        UpdateAttacks(!canBlock);
     }
-    void UpdateHoldAttack(bool isHoldAttack)
+    void UpdateAttacks(bool isHoldAttack)
     {
+        if (!sensors.Grounded && attemptingDive())
+        {
+            components.MAnimatorOptions.PerformActionAnimation("dive");
+        }
         detectionBoxUp.SetActive(false);
         detectionBoxSide.SetActive(false);
         detectionBoxDown.SetActive(false);
@@ -218,26 +228,42 @@ public class PlayerCharacter : Character
         }
         if (Input.GetKey(KeyCode.W))
         {
-            if (HasSmallCharge()) components.MAnimatorOptions.PerformActionAnimation("fire_up");
+            if (HasSmallCharge())
+            {
+                components.MAnimatorOptions.PerformActionAnimation("fire_up");
+                fireCooldown = 0.12f;
+            }
             detectionBoxUp.SetActive(true);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            if (HasSmallCharge()) components.MAnimatorOptions.PerformActionAnimation("fire_down");
+            if (HasSmallCharge())
+            {
+                components.MAnimatorOptions.PerformActionAnimation("fire_down");
+                fireCooldown = 0.12f;
+            }
             detectionBoxDown.SetActive(true);
         }
         else
         {
             detectionBoxSide.SetActive(true);
-            if (HasSmallCharge()) components.MAnimatorOptions.PerformActionAnimation("fire");
+            if (HasSmallCharge())
+            {
+                components.MAnimatorOptions.PerformActionAnimation("fire");
+                fireCooldown = 0.12f;
+            }
         }
         lastTimeHeldAttack = components.MScalableTime.TimeSinceLevelLoad();
+        
     }
     void AttemptJump()
     {
 
     }
-
+    private bool attemptingDive()
+    {
+        return Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.J);
+    }
     private void HandleJump(bool jumpPressed, bool jumpPressedFrame)
     {
         // Start the initial jump

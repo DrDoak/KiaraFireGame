@@ -14,6 +14,7 @@ public class Character : MonoBehaviour
     public StateChangedEvent EnterHitStun;
     public StateChangedEvent ExitHitStun;
     public bool canBlock;
+    public bool canTurn;
     // Start is called before the first frame update
     protected float baseMaxSpeed;
     [SerializeField]
@@ -84,6 +85,10 @@ public class Character : MonoBehaviour
         components.MMovement.SetPersonalVelocityX(newSpeed);
         // flip object based on direction
         float direction = Mathf.Sign(movementInput);
-        components.MMovement.SetFacingLeft(direction < 0);
+        if (canTurn)
+        {
+            components.MMovement.SetFacingLeft(direction < 0);
+        }
+        
     }
 }

@@ -59,7 +59,7 @@ public class HUDBar : MonoBehaviour
     void UpdateTimers()
     {
         float timeSoFar = GameManager.Instance.timeElapsed;
-        timeText.text = $"{Mathf.FloorToInt(timeSoFar / 60)} Min {Mathf.FloorToInt(timeSoFar % 60)} Sec";
+        timeText.text = $"{timeSoFar.ToString("F2")} sec";
         enemyText.text = $"{GameManager.Instance.defeatedEnemies} / {GameManager.Instance.totalEnemies}";
     }
 }

@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: maxHP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927970420852312712, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: currentHP
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3893744879475517129, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: m_Color.b
       value: 0

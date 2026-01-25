@@ -6,6 +6,8 @@ public class AnimatorOptions : MonoBehaviour
 {
     public bool hasControl = true;
     public bool canTurn = true;
+    public bool cancelOnGrounded;
+    public Vector2 applyImpulse;
     private string lastAnimation;
     [SerializeField]
     private string neutralAnimation = "idle";
@@ -23,6 +25,9 @@ public class AnimatorOptions : MonoBehaviour
     private bool startedNewAnimation;
     private List<SpriteRenderer> sprites = new List<SpriteRenderer>();
     private Dictionary<SpriteRenderer, int> initialSortingSprite = new Dictionary<SpriteRenderer, int>();
+    private Vector2 lastApplyImpulse;
+    
+    
 
     private void Start()
     {
@@ -32,7 +37,9 @@ public class AnimatorOptions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!startedNewAnimation && inActionAnimation && components.mAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.95f)
+        if (!startedNewAnimation && inActionAnimation &&
+            (components.mAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.95f ||
+            (cancelOnGrounded && components.MMovement.Grounded())))
         {
             inActionAnimation = false;
             if (neutralAnimation == "")
@@ -45,7 +52,23 @@ public class AnimatorOptions : MonoBehaviour
             }
         }
         startedNewAnimation = false;
-
+        if (lastApplyImpulse != applyImpulse)
+        {
+            if (applyImpulse.magnitude != 0)
+            {
+                if (applyImpulse.y != 0)
+                {
+                    components.MMovement.ResetVerticalVelocity();
+                }
+                Vector2 propel = new Vector2((components.MMovement.FacingLeft ? -1 : 1) * applyImpulse.x, applyImpulse.y);
+                components.MMovement.ApplyImpulse(propel);
+            }
+        }
+        lastApplyImpulse = applyImpulse;
+        if (components!= null && components.MCharacter != null)
+        {
+            components.MCharacter.canTurn = canTurn;
+        }
     }
     private void LateUpdate()
     {
@@ -71,6 +94,7 @@ public class AnimatorOptions : MonoBehaviour
     }
     public void PerformActionAnimation(string s)
     {
+        components.mAnimator.speed = 1;
         lastAnimation = s;
         components.mAnimator.Play(s);
         inActionAnimation = true;

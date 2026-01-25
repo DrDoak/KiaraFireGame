@@ -11,6 +11,7 @@ public class ActiveDetectionBox : MonoBehaviour
     [SerializeField]
     private CharacterComponents components;
     private PlayerCharacter mPlayer;
+    float lastTimeHit;
     private void Start()
     {
         mPlayer = components.GetComponent<PlayerCharacter>();
@@ -54,6 +55,9 @@ public class ActiveDetectionBox : MonoBehaviour
     private void TriggerAction(Hurtbox hb)
     {
         Attackable other = hb.ParentAttackable;
+        lastTimeHit = components.MScalableTime.TimeSinceLevelLoad();
+        if (mPlayer.FireCooldown > 0) return;
+        
         if (components.MMovement.Grounded())
         {
             if (Input.GetKey(KeyCode.W))
@@ -79,12 +83,12 @@ public class ActiveDetectionBox : MonoBehaviour
                 mPlayer.AlternateSlash();
             }
         }
-        timeHit[other] = components.MScalableTime.TimeSinceLevelLoad();
+        
     }
     private bool CanAttack(Attackable opponent)
     {
         if (!gameObject.activeSelf) return false;
-        if (timeHit.ContainsKey(opponent) && components.MScalableTime.TimeSinceLevelLoad() - timeHit[opponent] < refreshTime) return false;
+        if (components.MScalableTime.TimeSinceLevelLoad() - lastTimeHit < refreshTime) return false;
         if (opponent.MyFaction == Faction.INVINCIBLE)
         {
             return false;

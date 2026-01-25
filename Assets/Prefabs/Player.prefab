@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAnimator: {fileID: 3202087188407462230}
-  refreshTime: 0.15
+  refreshTime: 0.1
   components: {fileID: 7383203643925137685}
 --- !u!1 &1778202519085470311
 GameObject:
@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasControl: 1
   canTurn: 1
+  cancelOnGrounded: 0
+  applyImpulse: {x: 0, y: 0}
   neutralAnimation: idle
   components: {fileID: 7383203643925137685}
   stepSFX: step
@@ -701,7 +703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAnimator: {fileID: 3202087188407462230}
-  refreshTime: 0.15
+  refreshTime: 0.1
   components: {fileID: 7383203643925137685}
 --- !u!1 &4607008753252246901
 GameObject:
@@ -1342,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAnimator: {fileID: 3202087188407462230}
-  refreshTime: 0.15
+  refreshTime: 0.1
   components: {fileID: 7383203643925137685}
 --- !u!1 &7436470248763925177
 GameObject:

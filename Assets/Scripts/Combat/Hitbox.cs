@@ -92,6 +92,7 @@ public class Hitbox : MonoBehaviour
     }
     private bool CanAttack(Attackable opponent)
     {
+        if (opponent.CurrentHP == 0) return false;
         if (numMultiHit.ContainsKey(opponent) && numMultiHit[opponent] >= multiHits) return false;
         float time;
         if (components == null)

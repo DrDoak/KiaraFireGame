@@ -10,27 +10,23 @@ public class GameManager : MonoBehaviour
     private bool initiated;
     [SerializeField]
     private Animator mAnimator;
+    public string stageName;
     [SerializeField]
-    private string stageName;
-    [SerializeField]
-    private TextMeshProUGUI stageNameText;
+    private TextMeshProUGUI introStageName;
     [SerializeField]
     private TextMeshProUGUI pauseStageNamText;
-
-    [SerializeField]
-    private TextMeshProUGUI totalEnemiesText;
     [SerializeField]
     private TextMeshProUGUI pauseTotalEnemiesText;
-
-    [SerializeField]
-    private TextMeshProUGUI currentEnemiesText;
     [SerializeField]
     private TextMeshProUGUI pauseCurrentEnemiesText;
+    
 
     [SerializeField]
-    private TextMeshProUGUI timeComplete;
-    [SerializeField]
     private TextMeshProUGUI timePause;
+    [SerializeField]
+    public List<float> ranksThreasholds;
+    [SerializeField]
+    private EndingScreen endingScreen;
 
     private string nextStage;
     private bool completed;
@@ -49,8 +45,9 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         timeElapsed = 0;
+        introStageName.text = stageName;
+        pauseStageNamText.text = stageName;
         mAnimator.Play("intro");
-        stageNameText.text = stageName;
         
     }
     public static void RegisterEnemyTarget()
@@ -76,6 +73,10 @@ public class GameManager : MonoBehaviour
         {
             TogglePause();
         }
+        if (paused && Input.GetKeyDown(KeyCode.M))
+        {
+            ReturnToMenu();
+        }
     }
     void TogglePause()
     {
@@ -95,29 +96,33 @@ public class GameManager : MonoBehaviour
         float timeSoFar = timeElapsed;
         pauseTotalEnemiesText.text = totalEnemies.ToString();
         pauseCurrentEnemiesText.text = defeatedEnemies.ToString();
-        timePause.text = $"{Mathf.FloorToInt(timeSoFar/60)} Min {Mathf.FloorToInt(timeSoFar % 60)} Sec";
+        timePause.text = $"{timeSoFar.ToString("F2")} sec";
     }
     public void UnPause()
     {
         mAnimator.Play("unpause");
         Time.timeScale = 1;
     }
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
     void CheckPlayerDeleted()
     {
-        if (initiated && PlayerCharacter.Instance == null)
+        if (initiated && PlayerCharacter.Instance == null && SceneManager.GetActiveScene().name != "Finish")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
-    public static void CompletedStage(string nextStageName)
+    public static void CompletedStage(string nextstage)
     {
-        Instance.totalTime = Instance.timeElapsed;
-        Instance.totalEnemiesText.text = Instance.totalEnemies.ToString();
-        Instance.currentEnemiesText.text = Instance.defeatedEnemies.ToString();
         Instance.mAnimator.Play("complete");
-        Instance.nextStage = nextStageName;
+        Instance.nextStage = nextstage;
         Instance.completed = true;
         Time.timeScale = 0;
-        Instance.timeComplete.text = $"{Mathf.FloorToInt(Instance.totalTime / 60)} Min {Mathf.FloorToInt(Instance.totalTime % 60)} Sec";
+        Instance.totalTime = Instance.timeElapsed;
+        Instance.endingScreen.CompletedStage();
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "-complete", 1);
+        PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "-all-enemies",(Instance.defeatedEnemies >= Instance.totalEnemies) ? 1 : 0);
     }
 }

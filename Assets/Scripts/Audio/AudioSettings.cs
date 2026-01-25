@@ -10,6 +10,10 @@ public class AudioSettings : MonoBehaviour
 
     private void OnEnable()
     {
+        InitializeSettings();
+    }
+    public void InitializeSettings()
+    {
         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.5f);
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume", 0.5f);
     }
@@ -17,12 +21,12 @@ public class AudioSettings : MonoBehaviour
     {
         FMOD.Studio.Bus bus = FMODUnity.RuntimeManager.GetBus("bus:/Music");
         bus.setVolume(val);
-        PlayerPrefs.GetFloat("musicVolume", val);
+        PlayerPrefs.SetFloat("musicVolume", val);
     }
     public void sfxVolumeChange(float val)
     {
         FMOD.Studio.Bus sfx = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
         sfx.setVolume(val);
-        PlayerPrefs.GetFloat("sfxVolume", val);
+        PlayerPrefs.SetFloat("sfxVolume", val);
     }
 }

@@ -123,16 +123,76 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: kiara_concept_Frame_0
     originalName: 
-    pivot: {x: 0.85, y: 0}
+    pivot: {x: 0.40909094, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 67
+      width: 22
+      height: 55
+    spriteID: 14d41d771fae9ab4aab26b0343d25821
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 67}
+  - name: kiara_concept_Frame_1
+    originalName: 
+    pivot: {x: 0.40909094, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 4
+      width: 22
+      height: 55
+    spriteID: 9f1968a30ccac054094b3114d1d47942
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 4}
+  - name: kiara_concept_Frame_2
+    originalName: 
+    pivot: {x: 0.40909094, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 35
+      y: 67
+      width: 22
+      height: 55
+    spriteID: eb6001ba10479ad409e617dff0e83480
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 35, y: 67}
+  - name: kiara_concept_Frame_3
+    originalName: 
+    pivot: {x: 0.39130434, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 60
-      height: 48
-    spriteID: 14d41d771fae9ab4aab26b0343d25821
+      width: 23
+      height: 55
+    spriteID: c9db53a4926cd564e9f97aa7d0af60b3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,15 +210,42 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: kiara_concept
+    - name: kiara_concept_Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 13
+        x: 55
         y: 0
-        width: 60
-        height: 48
+        width: 22
+        height: 55
       spriteId: 14d41d771fae9ab4aab26b0343d25821
+    - name: kiara_concept_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 0
+        width: 22
+        height: 55
+      spriteId: 9f1968a30ccac054094b3114d1d47942
+    - name: kiara_concept_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 0
+        width: 22
+        height: 55
+      spriteId: eb6001ba10479ad409e617dff0e83480
+    - name: kiara_concept_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 55
+        y: 0
+        width: 23
+        height: 55
+      spriteId: c9db53a4926cd564e9f97aa7d0af60b3
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -177,4 +264,4 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 48}
+  canvasSize: {x: 128, y: 80}

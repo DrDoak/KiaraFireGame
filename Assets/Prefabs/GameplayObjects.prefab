@@ -551,8 +551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429, y: 83}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -263.1842, y: 83}
+  m_SizeDelta: {x: 531.631, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3612043249058461595
 CanvasRenderer:
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6797,7 +6797,7 @@ Transform:
   m_GameObject: {fileID: 2795543951834466255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -270.23523, y: -12.69728, z: -15.296571}
+  m_LocalPosition: {x: -271.78522, y: -17.04728, z: -15.296571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8690,8 +8690,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -15614,6 +15614,7 @@ GameObject:
   - component: {fileID: 1473087384174261301}
   - component: {fileID: 1728058853893633439}
   - component: {fileID: 7084500083438876672}
+  - component: {fileID: 5869600479857212164}
   m_Layer: 0
   m_Name: GameplayObjects
   m_TagString: Untagged
@@ -15664,6 +15665,7 @@ MonoBehaviour:
   timePause: {fileID: 4495098732175530107}
   ranksThreasholds: []
   endingScreen: {fileID: 7940863353198715304}
+  respawnOnNoPlayer: 1
   totalEnemies: 0
   defeatedEnemies: 0
   timeElapsed: 0
@@ -15715,7 +15717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogOutput: {fileID: 8482655473146915949}
-  characterTime: 0.1
+  characterTime: 0.07
   audioComponent: {fileID: 7084500083438876672}
 --- !u!114 &7084500083438876672
 MonoBehaviour:
@@ -15731,6 +15733,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioEventList: {fileID: 11400000, guid: 8c1b4eb52b28b0c47bd95385ae7c1529, type: 2}
   events: []
+--- !u!114 &5869600479857212164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144245962433293457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf72006a8481d84cba7817d2b23559e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSpeaker: {fileID: 0}
+  rightSpeaker: {fileID: 0}
+  cutsceneTransform: {fileID: 0}
+  showCutsceneImage: {fileID: 0}
 --- !u!1 &8441121349152822853
 GameObject:
   m_ObjectHideFlags: 0

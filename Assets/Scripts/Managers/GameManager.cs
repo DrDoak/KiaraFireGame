@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     private string nextStage;
     private bool completed;
     private bool paused = false;
-
+    [SerializeField]
+    private bool respawnOnNoPlayer = true;
     public int totalEnemies;
     public int defeatedEnemies;
     public float timeElapsed;
@@ -109,7 +110,7 @@ public class GameManager : MonoBehaviour
     }
     void CheckPlayerDeleted()
     {
-        if (initiated && PlayerCharacter.Instance == null && SceneManager.GetActiveScene().name != "Finish")
+        if (respawnOnNoPlayer && initiated && PlayerCharacter.Instance == null && SceneManager.GetActiveScene().name != "Finish")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

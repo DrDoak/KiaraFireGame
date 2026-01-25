@@ -13,13 +13,111 @@ MonoBehaviour:
   m_Name: Intro3
   m_EditorClassIdentifier: 
   dialogSequence:
-  - richText: I don't know what you expected a Reaper to do in this situation
+  - richText: 
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
         overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 1
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 4
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-12-slice
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: I don't know what you expected a Reaper to do in this situation
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -54,9 +152,109 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 1.5
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 4
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-13-flames
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -66,7 +264,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -101,9 +299,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-14-loop
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -115,7 +315,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -150,14 +350,65 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: 'You should still have a few minutes left within your current body
-      before you fully burn away.
+  - richText: This should give you back your strength.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli the Reaper
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-15-stand
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 'But be quick. You  only have a few minutes left with your current
+      body before you fully burn away.
 
 '
     dialogSettings:
@@ -165,7 +416,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -200,19 +451,21 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Thank you.
+  - richText: Thank You... Genuinely...
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -247,9 +500,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -259,7 +514,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -294,9 +549,60 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-16-leave
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 4
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0

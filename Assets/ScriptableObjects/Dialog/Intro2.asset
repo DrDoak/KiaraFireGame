@@ -19,7 +19,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Talking Corpse?
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -54,9 +54,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-4_rustle
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -66,7 +68,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -80,7 +82,7 @@ MonoBehaviour:
         dialogPlayOption: 0
         showImage: {fileID: 0}
         showObject: {fileID: 0}
-        playAnimation: 
+        playAnimation: anim-intro-5_turn
         forcePause: 0
         startMusicEvent:
           Guid:
@@ -101,19 +103,21 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Yes indeed! It's that Phoenix!
+  - richText: Yes indeed! It's her!
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -148,9 +152,60 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-6_warp
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: It's that Phoenix!
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Reaper
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-6_warp
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -162,7 +217,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -197,9 +252,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -211,7 +268,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -246,21 +303,22 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-7-cough
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: ' Looks like you''ve been busy this lifetime.
-
-'
+  - richText: So you decided to become a Knight this life. And a very busy one as
+      well.
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -295,9 +353,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -307,7 +367,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -342,9 +402,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -356,7 +418,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -391,9 +453,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-8-raise
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -404,7 +468,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -439,9 +503,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -451,7 +517,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -486,9 +552,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -499,7 +567,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -534,9 +602,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -546,7 +616,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -581,9 +651,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-9-face-back
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -593,7 +665,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -628,9 +700,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -640,7 +714,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -675,9 +749,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -690,7 +766,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -725,9 +801,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-7-cough
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -737,7 +815,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -772,9 +850,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -787,7 +867,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -822,9 +902,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-10-raise
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -834,7 +916,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -869,9 +951,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -881,7 +965,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -916,9 +1000,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-11-lower
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -928,7 +1014,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -963,9 +1049,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -978,7 +1066,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -1013,9 +1101,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -1026,7 +1116,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -1061,9 +1151,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -1073,7 +1165,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli the Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -1108,9 +1200,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-10-raise
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -1120,7 +1214,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara, Phoenix Knight
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -1155,10 +1249,12 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  nextDialog: {fileID: 0}
+  nextDialog: {fileID: 11400000, guid: 08f28d0cc0861b24881dad6ea0913eca, type: 2}

@@ -12,17 +12,17 @@ public class DialogueAnimationResponder : MonoBehaviour
     void Start()
     {
         if (DialogManager.Instance == null) return;
-        DialogManager.DialogSignalEvent += RespondToDialogSignal;
+        DialogManager.DialogStringSignalEvent += RespondToDialogStringSignal;
     }
     private void OnDestroy()
     {
-        DialogManager.DialogSignalEvent -= RespondToDialogSignal;
+        DialogManager.DialogStringSignalEvent -= RespondToDialogStringSignal;
     }
 
-    private void RespondToDialogSignal(DialogSignal signal)
+    private void RespondToDialogStringSignal(string signal)
     {
-        if (signal.name.Length < prefix.Length) return;
-        if (signal.name.Substring(0, prefix.Length) != prefix) return;
-        mAnimator.Play(signal.name.Substring(prefix.Length));
+        if (signal.Length < prefix.Length) return;
+        if (signal.Substring(0, prefix.Length) != prefix) return;
+        mAnimator.Play(signal.Substring(prefix.Length));
     }
 }

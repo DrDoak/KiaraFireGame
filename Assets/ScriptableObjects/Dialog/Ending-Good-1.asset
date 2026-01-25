@@ -13,6 +13,104 @@ MonoBehaviour:
   m_Name: Ending-Good-1
   m_EditorClassIdentifier: 
   dialogSequence:
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0.1
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 6
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-end1
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
   - richText: Have you completed everything you needed?
     dialogSettings:
       options: []
@@ -54,9 +152,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -101,9 +201,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -148,9 +250,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -195,13 +299,15 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-endo2
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: No need to rush.
+  - richText: No need to rush
     dialogSettings:
       options: []
       visualOptions:
@@ -242,9 +348,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-endg2
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -289,9 +397,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -336,10 +446,12 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-endg3
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  nextDialog: {fileID: 0}
+  nextDialog: {fileID: 11400000, guid: 3489f8340a117fc4f88026fe1cd0fba2, type: 2}

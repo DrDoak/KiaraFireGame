@@ -13,13 +13,111 @@ MonoBehaviour:
   m_Name: Intro1
   m_EditorClassIdentifier: 
   dialogSequence:
-  - richText: Ah Humanity...
+  - richText: 
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
         overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0.2
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 10
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-1
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Oh Humanity
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -54,9 +152,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-2-loop
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -66,7 +166,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Reaper
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -101,10 +201,61 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  nextDialog: {fileID: 0}
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 6
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-intro-3-slash
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  nextDialog: {fileID: 11400000, guid: 06e79ad7f1da17d4abd409aeb3df6b4b, type: 2}

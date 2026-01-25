@@ -31,7 +31,6 @@ public class DialogVisualElements : MonoBehaviour
     }
     public static void ProcessCutscene(DialogCutsceneSettings cutsceneSettings)
     {
-        if (Instance == null) return;
         Instance.ProcessMusic(cutsceneSettings);
         if (cutsceneSettings.forcePause > 0)
         {
@@ -85,13 +84,13 @@ public class DialogVisualElements : MonoBehaviour
     
     public static void DialogClose()
     {
-        if (Instance == null) return;
         Instance.leftSpeaker.DeactivateSpeaker();
         Instance.rightSpeaker.DeactivateSpeaker();
         Instance.DeleteCutsceneObj();
     }
     private void ProcessShowImage(DialogCutsceneSettings cutsceneSettings)
     {
+        if (showCutsceneImage == null) return;
         if (cutsceneSettings.showImage == null)
         {
             showCutsceneImage.gameObject.SetActive(false);

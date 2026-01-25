@@ -142,6 +142,7 @@ public struct DialogOption
 public class DialogActions
 {
     public DialogSignal emitSignal;
+    public string emitStringSignal;
     public string playSFX;
     //public WorldData loadWorld;
 
@@ -151,6 +152,11 @@ public class DialogActions
         {
             DialogManager.EmitDialogSignal(emitSignal);
         }
+        if (emitStringSignal != "")
+        {
+            DialogManager.EmitStringSignal(emitStringSignal);
+        }
+
         if (playSFX != "")
         {
             DialogManager.PlayAudioClip(playSFX);

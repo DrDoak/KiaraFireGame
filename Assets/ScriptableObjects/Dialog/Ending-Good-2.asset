@@ -55,9 +55,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -103,9 +105,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -150,9 +154,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -197,9 +203,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -245,9 +253,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -292,9 +302,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -340,9 +352,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -387,9 +401,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -434,9 +450,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-endg4
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0

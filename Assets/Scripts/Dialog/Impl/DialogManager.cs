@@ -8,6 +8,7 @@ using UnityEngine.Playables;
 using Debug = UnityEngine.Debug;
 
 public delegate void RespondToDialogSignal(DialogSignal signal);
+public delegate void RespondToDialogStringSignal(string signal);
 public class DialogManager : MonoBehaviour, IDialogManager
 {
     public Action DialogueSequenceStart;
@@ -27,6 +28,7 @@ public class DialogManager : MonoBehaviour, IDialogManager
     private List<DialogSequence> hasPlayedDialogSequence = new List<DialogSequence>();
     private bool isSkippingText = false;
     public static RespondToDialogSignal DialogSignalEvent;
+    public static RespondToDialogStringSignal DialogStringSignalEvent;
     public DialogSequence CurrentDialogSequence
     {
         get => currentDialogSequence;
@@ -98,6 +100,13 @@ public class DialogManager : MonoBehaviour, IDialogManager
         if (DialogSignalEvent != null)
         {
             DialogSignalEvent(sig);
+        }
+    }
+    public static void EmitStringSignal(string id)
+    {
+        if (DialogStringSignalEvent != null)
+        {
+            DialogStringSignalEvent(id);
         }
     }
     void ParseNextCharacter(DialogOutput output, Dialog dialog, ref int charIndex)

@@ -71,7 +71,7 @@ public class Spawner : MonoBehaviour
         if (newObj.GetComponent<BaseMovement>() != null)
         {
             newObj.GetComponent<BaseMovement>().SetFacingLeft(components.MMovement.FacingLeft);
-        } else
+        } else if (components != null)
         {
             newObj.transform.localScale = new Vector3((components.MMovement.FacingLeft ? -1 : 1) * newObj.transform.localScale.x,
                 newObj.transform.localScale.y, newObj.transform.localScale.z);

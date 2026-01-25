@@ -13,7 +13,105 @@ MonoBehaviour:
   m_Name: Ending-OK-1
   m_EditorClassIdentifier: 
   dialogSequence:
-  - richText: Have you completed everything you needed?
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 1
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 6
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-end1
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: So... Have you completed everything you needed?
     dialogSettings:
       options: []
       visualOptions:
@@ -54,13 +152,15 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: 'Enough for one lifetime. The important things at least.
+  - richText: 'Enough for one life. The important things at least.
 
 '
     dialogSettings:
@@ -103,14 +203,16 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "There are always a few regrets, a few things that I missed. But that\u2019s
-      just how life is. "
+      just how things are."
     dialogSettings:
       options: []
       visualOptions:
@@ -151,13 +253,15 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: " I am ready\u2026.\r\n"
+  - richText: In that case.
     dialogSettings:
       options: []
       visualOptions:
@@ -198,9 +302,11 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-endo2
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -245,13 +351,15 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: anim-endo3
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "I won\u2019t say I am eager to see you again quickly."
+  - richText: 'Calli... '
     dialogSettings:
       options: []
       visualOptions:
@@ -292,9 +400,109 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Yes?
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: "You know, I won\u2019t say I am exactly eager to see you again."
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -339,13 +547,15 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "Let\u2019s go on a date next time\u2026"
+  - richText: I'm thinking we can arrange something... a date maybe?
     dialogSettings:
       options: []
       visualOptions:
@@ -386,9 +596,60 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 2
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 4
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-endo4
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
@@ -433,13 +694,15 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "\u2026I\u2019ll consider it."
+  - richText: Phoenixes are so weird.
     dialogSettings:
       options: []
       visualOptions:
@@ -480,9 +743,109 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: 'but... '
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: I'll... I'll think about it.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: 
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: anim-endo5
+        playSFX: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0

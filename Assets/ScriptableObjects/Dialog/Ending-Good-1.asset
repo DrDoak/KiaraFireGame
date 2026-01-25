@@ -121,7 +121,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -376,7 +376,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0

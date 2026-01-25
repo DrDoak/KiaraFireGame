@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: Ending-Good-2
   m_EditorClassIdentifier: 
   dialogSequence:
-  - richText: "If we\u2019re going to keep seeing each other until the end of time\u2026
-      we might as well get to know each other better\r\n"
+  - richText: Calli? I think... I would want my next life to be more peaceful.
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -65,14 +64,219 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "What\u2019s the point? We\u2019ll still only see each other a few
-      minutes at a time."
+  - richText: That's not up to me to decide
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: I'm not asking for anything, I'm just dreaming.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Kiara
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: A knight's life is exciting and heroic... But I'm thinking I want something
+      that makes people more happy.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Kiara
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Do you happen to know about music?
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Kiara
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Only funerals and requiems. After all, I only see the last few minutes
+      of a life. Even yours.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -123,7 +327,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -174,7 +378,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -226,7 +430,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -277,7 +481,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Calli
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -329,7 +533,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -380,7 +584,7 @@ MonoBehaviour:
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -425,13 +629,116 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "Until we meet again\u2026"
+  - richText: Next Time we meet... maybe we could spend a little bit more time together.
+      Have ourselves a little date!
     dialogSettings:
       options: []
       visualOptions:
         clearAllPreviousPortraits: 0
         speaker: {fileID: 0}
-        overrideSpeakerName: 
+        overrideSpeakerName: Kiara
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: ...
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Until we meet again!
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Kiara
         overrideSpeakerPosition: 0
         overridePortrait: {fileID: 0}
         playSpeakerAnimation: 0
@@ -467,6 +774,108 @@ MonoBehaviour:
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-endg4
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Have I been invited... to a date?
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Maybe this is the start of something new.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
         playSFX: 
         loadWorld: 
       actionsAfterDialogClose:

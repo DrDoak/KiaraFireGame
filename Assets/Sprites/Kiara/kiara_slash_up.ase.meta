@@ -128,8 +128,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 95
+      x: 163
+      y: 66
       width: 55
       height: 26
     spriteID: baa6945a55d9531439e16383ed83eb3b
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 95}
+    uvTransform: {x: 163, y: 66}
   - name: kiara_slash_up_Frame_1
     originalName: 
-    pivot: {x: 0.56, y: -1.25}
+    pivot: {x: 0.56, y: -1.2068965}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 163
-      y: 66
+      x: 4
+      y: 95
       width: 50
-      height: 28
+      height: 29
     spriteID: 37a433ba0a117114cbd3f3344f849e15
     spriteBone: []
     spriteOutline: []
@@ -160,10 +160,10 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 163, y: 66}
+    uvTransform: {x: 4, y: 95}
   - name: kiara_slash_up_Frame_2
     originalName: 
-    pivot: {x: 0.5102041, y: -1.2068965}
+    pivot: {x: 0.5102041, y: -1.1666667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -171,7 +171,7 @@ ScriptedImporter:
       x: 83
       y: 90
       width: 49
-      height: 29
+      height: 30
     spriteID: 806120395676f0b43b308736a1f8f98e
     spriteBone: []
     spriteOutline: []
@@ -266,7 +266,7 @@ ScriptedImporter:
         x: 36
         y: 35
         width: 50
-        height: 28
+        height: 29
       spriteId: 37a433ba0a117114cbd3f3344f849e15
     - name: kiara_slash_up_Frame_2
       frameIndex: 2
@@ -275,7 +275,7 @@ ScriptedImporter:
         x: 39
         y: 35
         width: 49
-        height: 29
+        height: 30
       spriteId: 806120395676f0b43b308736a1f8f98e
     - name: kiara_slash_up_Frame_3
       frameIndex: 3

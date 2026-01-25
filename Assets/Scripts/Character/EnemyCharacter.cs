@@ -47,7 +47,7 @@ public class EnemyCharacter : Character
         if (components.MScalableTime.TimeSinceLevelLoad() > timeOfNextAttack)
         {
             timeOfNextAttack = components.MScalableTime.TimeSinceLevelLoad() + delayBetweenAttacks;
-            components.MAnimatorOptions.PlayAnimation(attackAnimation);
+            components.MAnimatorOptions.PerformActionAnimation(attackAnimation);
         }
         if (moveToPlayerSpeed > 0)
         {

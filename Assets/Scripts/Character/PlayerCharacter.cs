@@ -351,6 +351,11 @@ public class PlayerCharacter : Character
     }
     private void AnimateNeutral()
     {
+        string suffix = "";
+        if (!Input.GetKey(KeyCode.J))
+        {
+            suffix = "_neutral";
+        }
         components.mAnimator.speed = 1;
         if (sensors.Grounded)
         {
@@ -362,30 +367,30 @@ public class PlayerCharacter : Character
                     components.mAnimator.speed = (Mathf.Abs(currentSpeed.x) / baseMaxSpeed);
                     if (currentSpeed.magnitude >= boostedMaxSpeed * 0.9f)
                     {
-                        components.mAnimator.Play("sprint");
+                        components.mAnimator.Play("sprint" + suffix);
                     } else
                     {
-                        components.mAnimator.Play("run");
+                        components.mAnimator.Play("run" + suffix);
                     }
                 } else
                 {
-                    components.mAnimator.Play("stop");
+                    components.mAnimator.Play("stop" + suffix);
                 }
                 
             } else
             {
-                components.mAnimator.Play("idle");
+                components.mAnimator.Play("idle" + suffix);
             }
         } else
         {
             Vector2 currentSpeed = components.MMovement.Velocity;
             if (currentSpeed.y > 0.0f)
             {
-                components.mAnimator.Play("jump");
+                components.mAnimator.Play("jump" + suffix);
             }
             else
             {
-                components.mAnimator.Play("fall");
+                components.mAnimator.Play("fall" + suffix);
             }
         }
     }

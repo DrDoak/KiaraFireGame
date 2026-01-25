@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: kiara_run_Frame_0
     originalName: 
-    pivot: {x: 0.50769234, y: 0}
+    pivot: {x: -0.15, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 125
-      width: 65
-      height: 31
+      y: 59
+      width: 40
+      height: 48
     spriteID: 093abf5a9d88a0742a4b514760e43797
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 125}
+    uvTransform: {x: 4, y: 59}
   - name: kiara_run_Frame_1
     originalName: 
-    pivot: {x: 0.50769234, y: 0}
+    pivot: {x: -0.175, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 45
-      width: 65
-      height: 32
+      y: 115
+      width: 40
+      height: 48
     spriteID: 5346fcbeba879a646a696696512f5c17
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 45}
+    uvTransform: {x: 4, y: 115}
   - name: kiara_run_Frame_2
     originalName: 
-    pivot: {x: 0.50769234, y: 0}
+    pivot: {x: -0.1627907, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 65
-      height: 33
+      width: 43
+      height: 47
     spriteID: 4c36743f3b529f94cb9bef7beaf4c8ba
     spriteBone: []
     spriteOutline: []
@@ -183,15 +183,15 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: kiara_run_Frame_3
     originalName: 
-    pivot: {x: 0.50769234, y: 0}
+    pivot: {x: -0.175, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 85
-      width: 65
-      height: 32
+      y: 171
+      width: 40
+      height: 48
     spriteID: 42867fe5f693a65448f1b6e933980850
     spriteBone: []
     spriteOutline: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 85}
+    uvTransform: {x: 4, y: 171}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -214,37 +214,37 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 31
+        x: 70
         y: 0
-        width: 65
-        height: 31
+        width: 40
+        height: 48
       spriteId: 093abf5a9d88a0742a4b514760e43797
     - name: kiara_run_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 31
+        x: 71
         y: 0
-        width: 65
-        height: 32
+        width: 40
+        height: 48
       spriteId: 5346fcbeba879a646a696696512f5c17
     - name: kiara_run_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 31
+        x: 71
         y: 0
-        width: 65
-        height: 33
+        width: 43
+        height: 47
       spriteId: 4c36743f3b529f94cb9bef7beaf4c8ba
     - name: kiara_run_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 31
+        x: 71
         y: 0
-        width: 65
-        height: 32
+        width: 40
+        height: 48
       spriteId: 42867fe5f693a65448f1b6e933980850
     linkedCells: []
     parentIndex: -1

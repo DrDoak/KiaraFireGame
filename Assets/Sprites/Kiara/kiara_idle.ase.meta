@@ -123,15 +123,15 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: kiara_idle_Frame_0
     originalName: 
-    pivot: {x: 0.85, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 47
-      width: 60
-      height: 34
+      y: 167
+      width: 48
+      height: 45
     spriteID: f22a77cf5f2fb5c498eeebd11334f979
     spriteBone: []
     spriteOutline: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 47}
+    uvTransform: {x: 4, y: 167}
   - name: kiara_idle_Frame_1
     originalName: 
-    pivot: {x: 0.85, y: 0}
+    pivot: {x: 0.25531915, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 216
-      width: 60
-      height: 33
+      x: 60
+      y: 57
+      width: 47
+      height: 44
     spriteID: b1d874751f5858444817c15cd310881d
     spriteBone: []
     spriteOutline: []
@@ -160,18 +160,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 216}
+    uvTransform: {x: 60, y: 57}
   - name: kiara_idle_Frame_2
     originalName: 
-    pivot: {x: 0.85, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 89
-      width: 60
-      height: 34
+      y: 4
+      width: 48
+      height: 46
     spriteID: e71aca4725505b1459e8b7775ca92774
     spriteBone: []
     spriteOutline: []
@@ -180,18 +180,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 89}
+    uvTransform: {x: 4, y: 4}
   - name: kiara_idle_Frame_3
     originalName: 
-    pivot: {x: 0.84210527, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 173
-      width: 57
-      height: 35
+      y: 58
+      width: 48
+      height: 46
     spriteID: 7dee8d9fac9b9a7448fe6f8f3e5e0e3a
     spriteBone: []
     spriteOutline: []
@@ -200,18 +200,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 173}
+    uvTransform: {x: 4, y: 58}
   - name: kiara_idle_Frame_4
     originalName: 
-    pivot: {x: 0.85, y: 0}
+    pivot: {x: 0.2826087, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 60
-      height: 35
+      y: 112
+      width: 46
+      height: 47
     spriteID: a56ed2f441a71084bab1dff1b531cd66
     spriteBone: []
     spriteOutline: []
@@ -220,18 +220,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 112}
   - name: kiara_idle_Frame_5
     originalName: 
-    pivot: {x: 0.85, y: 0}
+    pivot: {x: 0.25, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 131
-      width: 60
-      height: 34
+      x: 60
+      y: 4
+      width: 48
+      height: 45
     spriteID: 3a68a28433996be48903ae4dfc83b89f
     spriteBone: []
     spriteOutline: []
@@ -240,7 +240,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 131}
+    uvTransform: {x: 60, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -254,55 +254,55 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 13
+        x: 52
         y: 0
-        width: 60
-        height: 34
+        width: 48
+        height: 45
       spriteId: f22a77cf5f2fb5c498eeebd11334f979
     - name: kiara_idle_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 13
+        x: 52
         y: 0
-        width: 60
-        height: 33
+        width: 47
+        height: 44
       spriteId: b1d874751f5858444817c15cd310881d
     - name: kiara_idle_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 13
+        x: 52
         y: 0
-        width: 60
-        height: 34
+        width: 48
+        height: 46
       spriteId: e71aca4725505b1459e8b7775ca92774
     - name: kiara_idle_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 16
+        x: 52
         y: 0
-        width: 57
-        height: 35
+        width: 48
+        height: 46
       spriteId: 7dee8d9fac9b9a7448fe6f8f3e5e0e3a
     - name: kiara_idle_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 13
+        x: 51
         y: 0
-        width: 60
-        height: 35
+        width: 46
+        height: 47
       spriteId: a56ed2f441a71084bab1dff1b531cd66
     - name: kiara_idle_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 13
+        x: 52
         y: 0
-        width: 60
-        height: 34
+        width: 48
+        height: 45
       spriteId: 3a68a28433996be48903ae4dfc83b89f
     linkedCells: []
     parentIndex: -1

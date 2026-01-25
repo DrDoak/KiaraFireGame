@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.3465
       objectReference: {fileID: 0}
+    - target: {fileID: 4984250951427873020, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
+      propertyPath: delayBetweenAttacks
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7325575655420123266, guid: 53f9e9309a5800745b0a10487e1f8ea6, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy

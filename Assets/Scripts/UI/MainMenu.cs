@@ -19,6 +19,10 @@ public class MainMenu : MonoBehaviour
     private string sceneName = "none";
     [SerializeField]
     private EventReference startMusicEvent;
+    [SerializeField]
+    private List<float> EagleTimes;
+    [SerializeField]
+    private List<float> PhoenixTimes;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +38,21 @@ public class MainMenu : MonoBehaviour
     public void SelectScene(string sceneName)
     {
         this.sceneName = sceneName;
+        int timeIndex = 0;
+        int.TryParse(sceneName.Substring(sceneName.Length - 1), out timeIndex);
         clearedText.SetActive(PlayerPrefs.HasKey(sceneName + "-complete") && PlayerPrefs.GetInt(sceneName + "-complete") == 1);
         allEnemiesDefeated.SetActive(PlayerPrefs.HasKey(sceneName + "-all-enemies") && PlayerPrefs.GetInt(sceneName + "-all-enemies") == 1);
         if (PlayerPrefs.HasKey(sceneName))
         {
-            bestTime.text = $"Best: {PlayerPrefs.GetFloat(sceneName).ToString("F2")} sec";
+            float bestTimeVar = PlayerPrefs.GetFloat(sceneName);
+            bestTime.text = $"Best: {bestTimeVar.ToString("F2")} sec";
+            if (bestTimeVar < PhoenixTimes[timeIndex - 1])
+            {
+                bestTime.text += " (P)";
+            } else if (bestTimeVar < EagleTimes[timeIndex - 1])
+            {
+                bestTime.text += " (E)";
+            }
         } else
         {
             bestTime.text = "";

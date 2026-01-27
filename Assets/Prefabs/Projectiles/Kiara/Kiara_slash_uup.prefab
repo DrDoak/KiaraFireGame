@@ -32,6 +32,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.1096
       objectReference: {fileID: 0}
+    - target: {fileID: 2532519607973883811, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.92
+      objectReference: {fileID: 0}
     - target: {fileID: 3942609764460507127, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -76,6 +80,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 589dbf1e93d5e884a95e6adb035b959a, type: 3}
+    - target: {fileID: 5220308046806004106, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220308046806004106, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 9208447438213590164, guid: 7b36bf512c7d4cf44af85546dcb039dc, type: 3}
       propertyPath: m_Name
       value: Kiara_slash_uup

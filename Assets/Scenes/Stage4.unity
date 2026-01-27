@@ -10294,6 +10294,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: beam_enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6968936123375240310, guid: 9d79acc4089e91848aa6c0fec6a8462f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968936123375240310, guid: 9d79acc4089e91848aa6c0fec6a8462f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 8781336983440526156, guid: 9d79acc4089e91848aa6c0fec6a8462f, type: 3}
       propertyPath: characterDetectionZone
       value: 70

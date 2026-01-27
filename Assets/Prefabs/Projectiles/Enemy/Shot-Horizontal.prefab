@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 494427965069885424, guid: af3338c8715a78141963a8eacccea2ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1407603982767956600, guid: af3338c8715a78141963a8eacccea2ad, type: 3}
       propertyPath: hitSFX
       value: Shot_hit

@@ -5715,7 +5715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2
+  m_text: 2-Subterranean Gaol
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
   m_sharedMaterial: {fileID: -6186107038513427803, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
@@ -11682,7 +11682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 5
+  m_text: 5- Corrupted Chambers
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
   m_sharedMaterial: {fileID: -6186107038513427803, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
@@ -12028,7 +12028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kiara Fire Game
+  m_text: Fire's Last Breath
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6b224441b065c54b88460dd8562a25b, type: 2}
   m_sharedMaterial: {fileID: -122686373064208428, guid: e6b224441b065c54b88460dd8562a25b, type: 2}
@@ -12055,8 +12055,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 108
-  m_fontSizeBase: 108
+  m_fontSize: 96
+  m_fontSizeBase: 96
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12295,7 +12295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 3
+  m_text: 3- Chasm Battlements
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
   m_sharedMaterial: {fileID: -6186107038513427803, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
@@ -13533,6 +13533,20 @@ MonoBehaviour:
       Data3: 482853531
       Data4: 213614584
     Path: event:/Ambiance/Wind_ambiance
+  EagleTimes:
+  - 16
+  - 40
+  - 36
+  - 40
+  - 35
+  - 30
+  PhoenixTimes:
+  - 14
+  - 36
+  - 30
+  - 30
+  - 30
+  - 21
 --- !u!114 &1435780498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13947,7 +13961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 4
+  m_text: 4- Dark Descent
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
   m_sharedMaterial: {fileID: -6186107038513427803, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
@@ -14162,7 +14176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1629961745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14772,7 +14786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 6
+  m_text: 6- Around the Core
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
   m_sharedMaterial: {fileID: -6186107038513427803, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
@@ -15058,7 +15072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: 1- Fallen Fortress
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}
   m_sharedMaterial: {fileID: -6186107038513427803, guid: fcf4c0e5ddf4595468ed9b6bdeb0886e, type: 2}

@@ -64,7 +64,7 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: That's not up to me to decide
+  - richText: Why are you telling me that? That's not up to me to decide
     dialogSettings:
       options: []
       visualOptions:
@@ -115,7 +115,7 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: I'm not asking for anything, I'm just dreaming.
+  - richText: I'm not asking for anything, I'm just wishing.
     dialogSettings:
       options: []
       visualOptions:
@@ -168,6 +168,58 @@ MonoBehaviour:
       skipToSequenceIndex: 0
   - richText: A knight's life is exciting and heroic... But I'm thinking I want something
       that makes people more happy.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Kiara
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Living among these mortal people for such a long time makes you really
+      appreciate their culture.
     dialogSettings:
       options: []
       visualOptions:
@@ -321,7 +373,7 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "Then we just have to make those minutes matter!\r"
+  - richText: "I have a feeling you would enjoy it. \r"
     dialogSettings:
       options: []
       visualOptions:
@@ -423,8 +475,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "They really know how to enjoy the time they do have. They do so many
-      things, create so many things\u2026\r\n"
+  - richText: 'Their lives are so short. Like a mere moment for being like you and
+      I. '
     dialogSettings:
       options: []
       visualOptions:
@@ -475,7 +527,59 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "Why does that matter for a reaper?\r"
+  - richText: Yet they still spend much of their time just enjoying life. Creating
+      things not for survival or profit. But just for their own enjoyment.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Kiara
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: "Why does that matter for a reaper? My business is death, not life.\r"
     dialogSettings:
       options: []
       visualOptions:
@@ -526,8 +630,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "Ah\u2026 who knows\u2026 maybe things can change. This world is full
-      of possibilities."
+  - richText: Haha... you may be surprised... things can change. And I have a feeling
+      things will for you too someday.
     dialogSettings:
       options: []
       visualOptions:
@@ -630,7 +734,7 @@ MonoBehaviour:
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Next Time we meet... maybe we could spend a little bit more time together.
-      Have ourselves a little date!
+      Have ourselves a little date! Talk about what has happened.
     dialogSettings:
       options: []
       visualOptions:
@@ -834,7 +938,60 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Maybe this is the start of something new.
+  - richText: I'm not sure I'm prepared for a Date. I never imagined I would have
+      the chance for something like that.
+    dialogSettings:
+      options: []
+      visualOptions:
+        clearAllPreviousPortraits: 0
+        speaker: {fileID: 0}
+        overrideSpeakerName: Calli
+        overrideSpeakerPosition: 0
+        overridePortrait: {fileID: 0}
+        playSpeakerAnimation: 0
+        expression: 0
+      conditionsToDisplayDialogue:
+        requiredKeyToPlay: 
+        prohibitedKeyToPlay: 
+        requiredSequencesComplete: []
+        prohibitedSequencesComplete: []
+      cutsceneOptions:
+        dialogPlayOption: 0
+        showImage: {fileID: 0}
+        showObject: {fileID: 0}
+        playAnimation: 
+        forcePause: 0
+        startMusicEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopMusic: 0
+        addExtraLayer: 0
+        ambienceEvent:
+          Guid:
+            Data1: 0
+            Data2: 0
+            Data3: 0
+            Data4: 0
+          Path: 
+        stopAmbience: 0
+      actionsOnStartDialog:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      actionsAfterDialogClose:
+        emitSignal: {fileID: 0}
+        emitStringSignal: 
+        playSFX: 
+        loadWorld: 
+      skipToSequence: {fileID: 0}
+      skipToSequenceIndex: 0
+  - richText: Well... at least I have some time to prepare. An entire lifetime's
+      worth at least.
     dialogSettings:
       options: []
       visualOptions:

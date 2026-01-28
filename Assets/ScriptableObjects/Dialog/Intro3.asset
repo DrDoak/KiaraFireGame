@@ -423,10 +423,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: 'But be quick. You  only have a few minutes left with your current
-      body before you fully burn away.
-
-'
+  - richText: Do what you must. You only have a few minutes left before you burn
+      away.
     dialogSettings:
       options: []
       visualOptions:
@@ -477,7 +475,7 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Thank You... Genuinely...
+  - richText: Thank You... genuinely...
     dialogSettings:
       options: []
       visualOptions:
@@ -528,7 +526,7 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: "Now Go... do what you must... you don't have much time.\r"
+  - richText: "Now go! You don't have much time.\r"
     dialogSettings:
       options: []
       visualOptions:

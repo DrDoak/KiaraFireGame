@@ -9,11 +9,11 @@ using FMODUnity;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
+    private TextMeshProUGUI bestTime100;
+    [SerializeField]
     private TextMeshProUGUI bestTime;
     [SerializeField]
     private GameObject clearedText;
-    [SerializeField]
-    private GameObject allEnemiesDefeated;
     [SerializeField]
     private Button startButton;
     private string sceneName = "none";
@@ -41,21 +41,25 @@ public class MainMenu : MonoBehaviour
         int timeIndex = 0;
         int.TryParse(sceneName.Substring(sceneName.Length - 1), out timeIndex);
         clearedText.SetActive(PlayerPrefs.HasKey(sceneName + "-complete") && PlayerPrefs.GetInt(sceneName + "-complete") == 1);
-        allEnemiesDefeated.SetActive(PlayerPrefs.HasKey(sceneName + "-all-enemies") && PlayerPrefs.GetInt(sceneName + "-all-enemies") == 1);
+        if (PlayerPrefs.HasKey(sceneName + "-100"))
+        {
+            float bestTimeVar = PlayerPrefs.GetFloat(sceneName);
+            bestTime100.text = $"Best(100%): {bestTimeVar.ToString("F2")} sec";
+            if (bestTimeVar < PhoenixTimes[timeIndex - 1])
+            {
+                bestTime100.text += " (P)";
+            } else if (bestTimeVar < EagleTimes[timeIndex - 1])
+            {
+                bestTime100.text += " (E)";
+            }
+        } else
+        {
+            bestTime100.text = "";
+        }
         if (PlayerPrefs.HasKey(sceneName))
         {
             float bestTimeVar = PlayerPrefs.GetFloat(sceneName);
             bestTime.text = $"Best: {bestTimeVar.ToString("F2")} sec";
-            if (bestTimeVar < PhoenixTimes[timeIndex - 1])
-            {
-                bestTime.text += " (P)";
-            } else if (bestTimeVar < EagleTimes[timeIndex - 1])
-            {
-                bestTime.text += " (E)";
-            }
-        } else
-        {
-            bestTime.text = "";
         }
         GetComponent<AudioComponent>().PlaySounds("MenuClick");
         startButton.interactable = (sceneName != "none");

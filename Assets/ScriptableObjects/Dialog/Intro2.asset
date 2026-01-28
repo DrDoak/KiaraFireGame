@@ -56,10 +56,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-4_rustle
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Huh? Could that be?
@@ -105,10 +107,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Yes indeed! It's her!
@@ -154,10 +158,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-6_warp
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: It's that Phoenix!
@@ -203,10 +209,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-6_warp
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Hello again Phoenix, I was wondering when I would find you again.
@@ -254,10 +262,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: '... *cough* *cough*...
@@ -305,14 +315,16 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-7-cough
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: So you decided to become a Knight this life. And a very busy one as
-      well.
+  - richText: I see you choose to become a Knight this lifetime, and a really busy
+      one from the looks of it.
     dialogSettings:
       options: []
       visualOptions:
@@ -355,10 +367,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: ' ...Hello again... old friend. '
@@ -404,13 +418,15 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: 'Hmmm. I didn''t imagine anybody would call the Reaper their friend.
+  - richText: 'Oh? I didn''t imagine anybody would call the Reaper their friend.
 
 '
     dialogSettings:
@@ -455,10 +471,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-8-raise
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Why not? We''ve already met each other so many times now... at least
@@ -505,10 +523,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: ...
@@ -554,10 +574,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: ' Oh come on Calli, no need to be so distant. I know you know my name
@@ -604,10 +626,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'If you insist... Kiara. '
@@ -653,10 +677,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-9-face-back
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Well then, before sever you from this mortal vessel...
@@ -702,10 +728,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Tell me, did you have a good life? '
@@ -751,10 +779,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'haha... *cough* *cough*... It was as good as one can get during this
@@ -803,10 +833,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-7-cough
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Only, I still have one final burning regret. '
@@ -852,10 +884,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Ah, Sorry to hear that. Not that I can do anything about that. Better
@@ -904,10 +938,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-10-raise
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Calli... can you help me?
@@ -953,10 +989,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: "Me?... Help you?\r"
@@ -1002,10 +1040,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-11-lower
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: " I only need a few minutes... I know I can defeat them\u2026\r\n"
@@ -1051,10 +1091,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Why does it matter if you will be gone soon? Who knows which nation,
@@ -1103,10 +1145,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: Calli... I know it sounds silly to you. The way mortal minds work and
@@ -1153,10 +1197,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: ...
@@ -1202,10 +1248,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: anim-intro-10-raise
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   - richText: 'Please, as a favor, for a friend... a few more minutes... '
@@ -1251,10 +1299,12 @@ MonoBehaviour:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       actionsAfterDialogClose:
         emitSignal: {fileID: 0}
         emitStringSignal: 
         playSFX: 
+        loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
   nextDialog: {fileID: 11400000, guid: 08f28d0cc0861b24881dad6ea0913eca, type: 2}

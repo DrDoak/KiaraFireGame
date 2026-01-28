@@ -20,6 +20,9 @@ public class EndingScreen : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI newRecordLabel;
     [SerializeField]
+    private TextMeshProUGUI percentageCompletion;
+
+    [SerializeField]
     private List<string> standardRanks;
 
     [SerializeField]
@@ -44,17 +47,20 @@ public class EndingScreen : MonoBehaviour
 
     public void CompletedStage()
     {
+        bool clearedAllEnemies = GameManager.Instance.defeatedEnemies == GameManager.Instance.totalEnemies;
         stageNameText.text = GameManager.Instance.stageName;
         totalEnemiesText.text = GameManager.Instance.totalEnemies.ToString();
         currentEnemiesText.text = GameManager.Instance.defeatedEnemies.ToString();
         timeComplete.text = $"{GameManager.Instance.timeElapsed.ToString("F2")} sec";
-        rankingText.text = GetRank(GameManager.Instance.ranksThreasholds,GameManager.Instance.timeElapsed,GameManager.Instance.defeatedEnemies, GameManager.Instance.totalEnemies);
-        UpdateRecords(GameManager.Instance.timeElapsed, GameManager.Instance.defeatedEnemies, GameManager.Instance.totalEnemies);
+        rankingText.text = GetRank(GameManager.Instance.ranksThreasholds,GameManager.Instance.timeElapsed, clearedAllEnemies);
+
+        percentageCompletion.text = $"{Mathf.RoundToInt((GameManager.Instance.defeatedEnemies * 100f) / GameManager.Instance.totalEnemies)} %";
+        UpdateRecords(GameManager.Instance.timeElapsed, clearedAllEnemies);
     }
 
-    private string GetRank(List<float> requirementTimes, float timeElapsed, int enemiesKilled, int totalEnemies)
+    private string GetRank(List<float> requirementTimes, float timeElapsed, bool clearedAllEnemies)
     {
-        List<string> rankNames = enemiesKilled >= totalEnemies ? allKillRanks : standardRanks;
+        List<string> rankNames = clearedAllEnemies ? allKillRanks : standardRanks;
         for (int i = 0; i < requirementTimes.Count; i++)
         {
             if (timeElapsed < requirementTimes[i])
@@ -65,31 +71,31 @@ public class EndingScreen : MonoBehaviour
         return rankNames[rankNames.Count - 1];
     }
 
-    private void UpdateRecords(float time, int enemiesKilled, int totalEnemies)
+    private void UpdateRecords(float time, bool clearedAllEnemies)
     {
-        if (enemiesKilled < totalEnemies)
+        string bestTimeKey = SceneManager.GetActiveScene().name;
+        if (clearedAllEnemies)
         {
-            recordTime.text = "";
-            newRecordLabel.text = "";
-            return;
+            bestTimeKey += "-100";
         }
         float oldRecord = 9999999;
-        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name))
+        if (PlayerPrefs.HasKey(bestTimeKey))
         {
-            oldRecord = PlayerPrefs.GetFloat(SceneManager.GetActiveScene().name);
+            oldRecord = PlayerPrefs.GetFloat(bestTimeKey);
         }
         if (time < oldRecord)
         {
             newRecordLabel.text = "New Record";
-            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name, time);
+            string bestTimeText = clearedAllEnemies ? "Best(100%): " : "Best: ";
+            PlayerPrefs.SetFloat(bestTimeKey, time);
             if (oldRecord < 900)
             {
-                recordTime.text = $"Best: {oldRecord.ToString("F2")} sec";
+                bestTimeText += $"{oldRecord.ToString("F2")} sec";
             } else
             {
-                recordTime.text = "Best: N/A";
+                bestTimeText += "N/A";
             }
-            
+            recordTime.text = bestTimeText;
         } else
         {
             newRecordLabel.text = "";

@@ -166,8 +166,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: A knight's life is exciting and heroic... But I'm thinking I want something
-      that makes people more happy.
+  - richText: A knight's life is exciting and heroic... But I'm thinking I want to
+      do something that just makes people happy.
     dialogSettings:
       options: []
       visualOptions:
@@ -321,8 +321,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Only funerals and requiems. After all, I only see the last few minutes
-      of a life. Even yours.
+  - richText: 'Only funerals and requiems. After all, I only see the last few minutes
+      of a life. '
     dialogSettings:
       options: []
       visualOptions:
@@ -733,8 +733,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Next Time we meet... maybe we could spend a little bit more time together.
-      Have ourselves a little date! Talk about what has happened.
+  - richText: 'Next Time we meet... maybe we could spend a little bit more time together
+      and talk about what''s happened. Have ourselves a little date! '
     dialogSettings:
       options: []
       visualOptions:
@@ -938,8 +938,8 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: I'm not sure I'm prepared for a Date. I never imagined I would have
-      the chance for something like that.
+  - richText: I never imagined I would have the chance for something like that. I
+      don't know if I'm prepared.
     dialogSettings:
       options: []
       visualOptions:
@@ -1032,7 +1032,7 @@ MonoBehaviour:
         stopAmbience: 0
       actionsOnStartDialog:
         emitSignal: {fileID: 0}
-        emitStringSignal: 
+        emitStringSignal: anim-endo5
         playSFX: 
         loadWorld: 
       actionsAfterDialogClose:

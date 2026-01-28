@@ -115,7 +115,7 @@ MonoBehaviour:
         loadWorld: 
       skipToSequence: {fileID: 0}
       skipToSequenceIndex: 0
-  - richText: Oh Humanity
+  - richText: Oh Humanity...
     dialogSettings:
       options: []
       visualOptions:

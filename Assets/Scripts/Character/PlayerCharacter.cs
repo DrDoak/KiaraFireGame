@@ -68,12 +68,17 @@ public class PlayerCharacter : Character
     private bool useSecondSlash;
     [SerializeField]
     private bool burn;
+
+    Dictionary<KeyCode, float> lastTimePressed = new Dictionary<KeyCode, float>();
+    private const float DIVEKICK_INPUT_BUFFER = 0.08f;
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
         sensors = GetComponent<SurroundingSensors>();
         Instance = this;
         baseMaxSpeed = maxSpeed;
+        lastTimePressed[KeyCode.S] = 0;
+        lastTimePressed[KeyCode.Space] = 0;
     }
     private void Start()
     {
@@ -141,6 +146,7 @@ public class PlayerCharacter : Character
     // Update is called once per frame
     void Update()
     {
+        UpdateLastTimePressed();
         fireCooldown = Mathf.Max(0, fireCooldown - components.MScalableTime.DeltaTime);
         if (components.MMovement.Grounded())
         {
@@ -262,7 +268,11 @@ public class PlayerCharacter : Character
     }
     private bool attemptingDive()
     {
-        return Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.Space) && !Input.GetKey(KeyCode.J);
+        if (Input.GetKeyDown(KeyCode.J)) return false;
+
+        if (Input.GetKeyDown(KeyCode.S) && Time.timeSinceLevelLoad - lastTimePressed[KeyCode.Space] < DIVEKICK_INPUT_BUFFER) return true;
+        if (Input.GetKeyDown(KeyCode.Space) && Time.timeSinceLevelLoad - lastTimePressed[KeyCode.S] < DIVEKICK_INPUT_BUFFER) return true;
+        return false;
     }
     private void HandleJump(bool jumpPressed, bool jumpPressedFrame)
     {
@@ -432,6 +442,19 @@ public class PlayerCharacter : Character
         if (maxSpeed >= (baseMaxSpeed + ((3 * diff) / hitsToReachMaxBoost)))
         {
             speedlvl3.emitting = true;
+        }
+    }
+
+    private void UpdateLastTimePressed()
+    {
+        float time = Time.timeSinceLevelLoad;
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            lastTimePressed[KeyCode.S] = time;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            lastTimePressed[KeyCode.Space] = time;
         }
     }
 

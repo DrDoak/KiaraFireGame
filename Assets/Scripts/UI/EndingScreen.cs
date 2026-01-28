@@ -54,7 +54,7 @@ public class EndingScreen : MonoBehaviour
         timeComplete.text = $"{GameManager.Instance.timeElapsed.ToString("F2")} sec";
         rankingText.text = GetRank(GameManager.Instance.ranksThreasholds,GameManager.Instance.timeElapsed, clearedAllEnemies);
 
-        percentageCompletion.text = $"{Mathf.RoundToInt((GameManager.Instance.defeatedEnemies * 100f) / GameManager.Instance.totalEnemies)} %";
+        percentageCompletion.text = clearedAllEnemies? "FULL CLEAR" : $"{Mathf.RoundToInt((GameManager.Instance.defeatedEnemies * 100f) / GameManager.Instance.totalEnemies)} %";
         UpdateRecords(GameManager.Instance.timeElapsed, clearedAllEnemies);
     }
 

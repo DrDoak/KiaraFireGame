@@ -70,7 +70,7 @@ public class PlayerCharacter : Character
     private bool burn;
 
     Dictionary<KeyCode, float> lastTimePressed = new Dictionary<KeyCode, float>();
-    private const float DIVEKICK_INPUT_BUFFER = 0.08f;
+    private const float DIVEKICK_INPUT_BUFFER = 0.1f;
     private void Awake()
     {
         components = GetComponent<CharacterComponents>();
